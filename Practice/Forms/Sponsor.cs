@@ -48,5 +48,10 @@ namespace Practice.Forms
             LBL_TimeToStart.Text = StringTimeToStart + "!";
             LBL_TimeToStart.Show();
         }
+
+        private void Sponsor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
