@@ -1,4 +1,5 @@
 ﻿using Practice.Data;
+using Practice.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,6 @@ namespace Practice
 {
     public partial class Marathon : Form
     {
-        public string StringTimeToStart;
         public Marathon()
         {
             InitializeComponent();
@@ -45,6 +45,13 @@ namespace Practice
             }
             LBL_TimeToStart.Text = StringTimeToStart + "!";
             LBL_TimeToStart.Show();
+        }
+
+        private void BTN_Sponsor_Click(object sender, EventArgs e)
+        {
+            Sponsor sponsor = new Sponsor();
+            this.Hide();
+            sponsor.Show();
         }
     }
 }
