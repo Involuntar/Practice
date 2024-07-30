@@ -49,8 +49,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BTN_DonateDecrease = new System.Windows.Forms.Button();
+            this.BTN_DonateIncrease = new System.Windows.Forms.Button();
             this.BTN_Donate = new System.Windows.Forms.Button();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
@@ -156,7 +156,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.LBL_CharityAmount, 2);
             this.LBL_CharityAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LBL_CharityAmount.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_CharityAmount.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.LBL_CharityAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(29)))), ((int)(((byte)(112)))));
             this.LBL_CharityAmount.Location = new System.Drawing.Point(5, 66);
             this.LBL_CharityAmount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_CharityAmount.Name = "LBL_CharityAmount";
@@ -297,30 +297,32 @@
             this.textBox6.Size = new System.Drawing.Size(225, 34);
             this.textBox6.TabIndex = 18;
             // 
-            // button1
+            // BTN_DonateDecrease
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(60, 137);
-            this.button1.MaximumSize = new System.Drawing.Size(55, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 55);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_DonateDecrease.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BTN_DonateDecrease.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_DonateDecrease.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_DonateDecrease.Location = new System.Drawing.Point(60, 137);
+            this.BTN_DonateDecrease.MaximumSize = new System.Drawing.Size(55, 55);
+            this.BTN_DonateDecrease.Name = "BTN_DonateDecrease";
+            this.BTN_DonateDecrease.Size = new System.Drawing.Size(55, 55);
+            this.BTN_DonateDecrease.TabIndex = 19;
+            this.BTN_DonateDecrease.Text = "-";
+            this.BTN_DonateDecrease.UseVisualStyleBackColor = true;
+            this.BTN_DonateDecrease.Click += new System.EventHandler(this.BTN_DonateDecrease_Click);
             // 
-            // button2
+            // BTN_DonateIncrease
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(235, 137);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 55);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTN_DonateIncrease.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BTN_DonateIncrease.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_DonateIncrease.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
+            this.BTN_DonateIncrease.Location = new System.Drawing.Point(235, 137);
+            this.BTN_DonateIncrease.Name = "BTN_DonateIncrease";
+            this.BTN_DonateIncrease.Size = new System.Drawing.Size(55, 55);
+            this.BTN_DonateIncrease.TabIndex = 20;
+            this.BTN_DonateIncrease.Text = "+";
+            this.BTN_DonateIncrease.UseVisualStyleBackColor = true;
+            this.BTN_DonateIncrease.Click += new System.EventHandler(this.BTN_DonateIncrease_Click);
             // 
             // BTN_Donate
             // 
@@ -333,6 +335,7 @@
             this.BTN_Donate.TabIndex = 22;
             this.BTN_Donate.Text = "Пожертвовать";
             this.BTN_Donate.UseVisualStyleBackColor = true;
+            this.BTN_Donate.Click += new System.EventHandler(this.BTN_Donate_Click);
             // 
             // LBL_MarathonName
             // 
@@ -411,9 +414,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.BTN_Donate, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.LBL_CharitySumm, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateIncrease, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.LBL_CharityAmount, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateDecrease, 0, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(550, 307);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -477,8 +480,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label LBL_Charity;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BTN_DonateDecrease;
+        private System.Windows.Forms.Button BTN_DonateIncrease;
         private System.Windows.Forms.Button BTN_Donate;
         private System.Windows.Forms.Label LBL_MarathonName;
         private System.Windows.Forms.Label LBL_TimeToStart;

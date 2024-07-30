@@ -53,5 +53,27 @@ namespace Practice.Forms
         {
 
         }
+
+        private void BTN_Donate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_DonateIncrease_Click(object sender, EventArgs e)
+        {
+            UInt32 IncreasedSumm = Convert.ToUInt32(LBL_CharityAmount.Text.Substring(1)) + 10;
+            if (IncreasedSumm > 10)
+                LBL_CharityAmount.Text = "$" + Convert.ToString(IncreasedSumm);
+                LBL_CharityAmount.ForeColor = Color.FromArgb(100, 36, 29, 112);
+        }
+
+        private void BTN_DonateDecrease_Click(object sender, EventArgs e)
+        {
+            UInt32 DecreasedSumm = Convert.ToUInt32(LBL_CharityAmount.Text.Substring(1)) - 10;
+            if (DecreasedSumm > 0)
+                LBL_CharityAmount.Text = "$" + Convert.ToString(DecreasedSumm);
+                if (DecreasedSumm == 10)
+                    LBL_CharityAmount.ForeColor = Color.Red;
+        }
     }
 }
