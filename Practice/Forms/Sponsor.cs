@@ -1,8 +1,10 @@
-﻿using Practice.Data;
+﻿using MySql.Data.MySqlClient;
+using Practice.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,7 +53,17 @@ namespace Practice.Forms
 
         private void Sponsor_Load(object sender, EventArgs e)
         {
-
+            Connection.SeelectInComboBox("SELECT CONCAT(FirstName, ' ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
+                "JOIN runner ON user.Email = runner.Email " +
+                "JOIN country ON country.CountryCode = runner.CountryCode", CMBX_Runner, "Runner", "RunnerId");
+            //DateTime DateToday = DateTime.Now;
+            //DateTime DateEnd = DateToday.AddYears(15);
+            //while (DateEnd > DateToday)
+            //{
+            //    CMBX_Year.Items.Add(Convert.ToString(DateEnd.Year));
+            //    DateEnd.AddYears(-1);
+            //}
+            //CMBX_Month.Items.Add(Convert.ToString(DateToday.Month));
         }
 
         private void BTN_Donate_Click(object sender, EventArgs e)
@@ -64,7 +76,7 @@ namespace Practice.Forms
             UInt32 IncreasedSumm = Convert.ToUInt32(LBL_CharityAmount.Text.Substring(1)) + 10;
             if (IncreasedSumm > 10)
                 LBL_CharityAmount.Text = "$" + Convert.ToString(IncreasedSumm);
-                LBL_CharityAmount.ForeColor = Color.FromArgb(100, 36, 29, 112);
+            LBL_CharityAmount.ForeColor = Color.FromArgb(100, 36, 29, 112);
         }
 
         private void BTN_DonateDecrease_Click(object sender, EventArgs e)
@@ -72,8 +84,28 @@ namespace Practice.Forms
             UInt32 DecreasedSumm = Convert.ToUInt32(LBL_CharityAmount.Text.Substring(1)) - 10;
             if (DecreasedSumm > 0)
                 LBL_CharityAmount.Text = "$" + Convert.ToString(DecreasedSumm);
-                if (DecreasedSumm == 10)
-                    LBL_CharityAmount.ForeColor = Color.Red;
+            else
+            {
+                LBL_CharityAmount.Text = "$10";
+            }
+            if (DecreasedSumm == 10)
+                LBL_CharityAmount.ForeColor = Color.Red;
+        }
+
+        private void TBX_Charity_TextChanged(object sender, EventArgs e)
+        {
+            if (TBX_Charity.Text == String.Empty){
+                LBL_CharityAmount.Text = "$10";
+            }
+            else if (Convert.ToUInt16(TBX_Charity.Text) > 10){
+                LBL_CharityAmount.Text = "$" + TBX_Charity.Text;
+                LBL_CharityAmount.ForeColor = Color.FromArgb(100, 36, 29, 112);
+            }
+            else
+            {
+                LBL_CharityAmount.Text = "$10";
+                LBL_CharityAmount.ForeColor = Color.Red;
+            }
         }
     }
 }

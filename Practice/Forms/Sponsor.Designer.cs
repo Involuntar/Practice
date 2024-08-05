@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.BTN_Back = new System.Windows.Forms.Button();
             this.LBL_Sponsor = new System.Windows.Forms.Label();
             this.LBL_Instruction = new System.Windows.Forms.Label();
@@ -43,21 +44,22 @@
             this.LBL_CardNumber = new System.Windows.Forms.Label();
             this.LBL_CardDate = new System.Windows.Forms.Label();
             this.LBL_CardCVC = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TBX_Name = new System.Windows.Forms.TextBox();
+            this.TBX_CardOwner = new System.Windows.Forms.TextBox();
+            this.TBX_CardNumber = new System.Windows.Forms.TextBox();
+            this.TBX_CardCVC = new System.Windows.Forms.TextBox();
             this.BTN_DonateDecrease = new System.Windows.Forms.Button();
             this.BTN_DonateIncrease = new System.Windows.Forms.Button();
             this.BTN_Donate = new System.Windows.Forms.Button();
-            this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.CMBX_Runner = new System.Windows.Forms.ComboBox();
+            this.CMBX_Month = new System.Windows.Forms.ComboBox();
+            this.CMBX_Year = new System.Windows.Forms.ComboBox();
+            this.TBX_Charity = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -71,10 +73,22 @@
             this.panel1.Controls.Add(this.BTN_Back);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 79);
             this.panel1.TabIndex = 0;
+            // 
+            // LBL_MarathonName
+            // 
+            this.LBL_MarathonName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LBL_MarathonName.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold);
+            this.LBL_MarathonName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LBL_MarathonName.Location = new System.Drawing.Point(131, 0);
+            this.LBL_MarathonName.Name = "LBL_MarathonName";
+            this.LBL_MarathonName.Size = new System.Drawing.Size(481, 79);
+            this.LBL_MarathonName.TabIndex = 23;
+            this.LBL_MarathonName.Text = "Marathon Skills 2024";
+            this.LBL_MarathonName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BTN_Back
             // 
@@ -82,7 +96,7 @@
             this.BTN_Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Back.Dock = System.Windows.Forms.DockStyle.Left;
             this.BTN_Back.Location = new System.Drawing.Point(0, 0);
-            this.BTN_Back.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BTN_Back.Margin = new System.Windows.Forms.Padding(5);
             this.BTN_Back.Name = "BTN_Back";
             this.BTN_Back.Size = new System.Drawing.Size(131, 79);
             this.BTN_Back.TabIndex = 0;
@@ -140,7 +154,7 @@
             // 
             // LBL_CharitySumm
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.LBL_CharitySumm, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.LBL_CharitySumm, 3);
             this.LBL_CharitySumm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LBL_CharitySumm.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_CharitySumm.Location = new System.Drawing.Point(5, 0);
@@ -153,7 +167,7 @@
             // 
             // LBL_CharityAmount
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.LBL_CharityAmount, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.LBL_CharityAmount, 3);
             this.LBL_CharityAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LBL_CharityAmount.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_CharityAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(29)))), ((int)(((byte)(112)))));
@@ -169,7 +183,7 @@
             // 
             this.LBL_SponsorName.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_SponsorName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_SponsorName.Location = new System.Drawing.Point(104, 0);
+            this.LBL_SponsorName.Location = new System.Drawing.Point(94, 0);
             this.LBL_SponsorName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_SponsorName.Name = "LBL_SponsorName";
             this.LBL_SponsorName.Size = new System.Drawing.Size(125, 44);
@@ -181,7 +195,7 @@
             // 
             this.LBL_Runner.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_Runner.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_Runner.Location = new System.Drawing.Point(148, 44);
+            this.LBL_Runner.Location = new System.Drawing.Point(138, 44);
             this.LBL_Runner.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Runner.Name = "LBL_Runner";
             this.LBL_Runner.Size = new System.Drawing.Size(81, 44);
@@ -193,7 +207,7 @@
             // 
             this.LBL_CardOwner.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_CardOwner.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_CardOwner.Location = new System.Drawing.Point(21, 88);
+            this.LBL_CardOwner.Location = new System.Drawing.Point(11, 88);
             this.LBL_CardOwner.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_CardOwner.Name = "LBL_CardOwner";
             this.LBL_CardOwner.Size = new System.Drawing.Size(208, 44);
@@ -205,7 +219,7 @@
             // 
             this.LBL_CardNumber.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_CardNumber.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_CardNumber.Location = new System.Drawing.Point(54, 132);
+            this.LBL_CardNumber.Location = new System.Drawing.Point(44, 132);
             this.LBL_CardNumber.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_CardNumber.Name = "LBL_CardNumber";
             this.LBL_CardNumber.Size = new System.Drawing.Size(175, 44);
@@ -217,7 +231,7 @@
             // 
             this.LBL_CardDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_CardDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_CardDate.Location = new System.Drawing.Point(53, 176);
+            this.LBL_CardDate.Location = new System.Drawing.Point(43, 176);
             this.LBL_CardDate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_CardDate.Name = "LBL_CardDate";
             this.LBL_CardDate.Size = new System.Drawing.Size(176, 44);
@@ -229,7 +243,7 @@
             // 
             this.LBL_CardCVC.Dock = System.Windows.Forms.DockStyle.Right;
             this.LBL_CardCVC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_CardCVC.Location = new System.Drawing.Point(115, 220);
+            this.LBL_CardCVC.Location = new System.Drawing.Point(105, 220);
             this.LBL_CardCVC.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_CardCVC.Name = "LBL_CardCVC";
             this.LBL_CardCVC.Size = new System.Drawing.Size(114, 46);
@@ -237,72 +251,58 @@
             this.LBL_CardCVC.Text = "CVC-код:";
             this.LBL_CardCVC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // TBX_Name
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(239, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 34);
-            this.textBox1.TabIndex = 13;
+            this.tableLayoutPanel1.SetColumnSpan(this.TBX_Name, 2);
+            this.TBX_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TBX_Name.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Name.Location = new System.Drawing.Point(229, 5);
+            this.TBX_Name.Margin = new System.Windows.Forms.Padding(5);
+            this.TBX_Name.Name = "TBX_Name";
+            this.TBX_Name.Size = new System.Drawing.Size(238, 34);
+            this.TBX_Name.TabIndex = 13;
             // 
-            // textBox2
+            // TBX_CardOwner
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(239, 49);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 34);
-            this.textBox2.TabIndex = 14;
+            this.tableLayoutPanel1.SetColumnSpan(this.TBX_CardOwner, 2);
+            this.TBX_CardOwner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TBX_CardOwner.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_CardOwner.Location = new System.Drawing.Point(229, 93);
+            this.TBX_CardOwner.Margin = new System.Windows.Forms.Padding(5);
+            this.TBX_CardOwner.Name = "TBX_CardOwner";
+            this.TBX_CardOwner.Size = new System.Drawing.Size(238, 34);
+            this.TBX_CardOwner.TabIndex = 15;
             // 
-            // textBox3
+            // TBX_CardNumber
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(239, 93);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 34);
-            this.textBox3.TabIndex = 15;
+            this.tableLayoutPanel1.SetColumnSpan(this.TBX_CardNumber, 2);
+            this.TBX_CardNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TBX_CardNumber.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_CardNumber.Location = new System.Drawing.Point(229, 137);
+            this.TBX_CardNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.TBX_CardNumber.MaxLength = 16;
+            this.TBX_CardNumber.Name = "TBX_CardNumber";
+            this.TBX_CardNumber.Size = new System.Drawing.Size(238, 34);
+            this.TBX_CardNumber.TabIndex = 16;
             // 
-            // textBox4
+            // TBX_CardCVC
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(239, 137);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(225, 34);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(239, 181);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(225, 34);
-            this.textBox5.TabIndex = 17;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(239, 225);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(225, 34);
-            this.textBox6.TabIndex = 18;
+            this.tableLayoutPanel1.SetColumnSpan(this.TBX_CardCVC, 2);
+            this.TBX_CardCVC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TBX_CardCVC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_CardCVC.Location = new System.Drawing.Point(229, 225);
+            this.TBX_CardCVC.Margin = new System.Windows.Forms.Padding(5);
+            this.TBX_CardCVC.MaxLength = 3;
+            this.TBX_CardCVC.Name = "TBX_CardCVC";
+            this.TBX_CardCVC.Size = new System.Drawing.Size(238, 34);
+            this.TBX_CardCVC.TabIndex = 18;
             // 
             // BTN_DonateDecrease
             // 
             this.BTN_DonateDecrease.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTN_DonateDecrease.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_DonateDecrease.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_DonateDecrease.Location = new System.Drawing.Point(60, 137);
+            this.BTN_DonateDecrease.Location = new System.Drawing.Point(29, 137);
             this.BTN_DonateDecrease.MaximumSize = new System.Drawing.Size(55, 55);
             this.BTN_DonateDecrease.Name = "BTN_DonateDecrease";
             this.BTN_DonateDecrease.Size = new System.Drawing.Size(55, 55);
@@ -316,7 +316,8 @@
             this.BTN_DonateIncrease.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTN_DonateIncrease.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_DonateIncrease.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold);
-            this.BTN_DonateIncrease.Location = new System.Drawing.Point(235, 137);
+            this.BTN_DonateIncrease.Location = new System.Drawing.Point(260, 137);
+            this.BTN_DonateIncrease.MaximumSize = new System.Drawing.Size(55, 55);
             this.BTN_DonateIncrease.Name = "BTN_DonateIncrease";
             this.BTN_DonateIncrease.Size = new System.Drawing.Size(55, 55);
             this.BTN_DonateIncrease.TabIndex = 20;
@@ -326,7 +327,7 @@
             // 
             // BTN_Donate
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.BTN_Donate, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.BTN_Donate, 3);
             this.BTN_Donate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Donate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BTN_Donate.Location = new System.Drawing.Point(3, 201);
@@ -336,18 +337,6 @@
             this.BTN_Donate.Text = "Пожертвовать";
             this.BTN_Donate.UseVisualStyleBackColor = true;
             this.BTN_Donate.Click += new System.EventHandler(this.BTN_Donate_Click);
-            // 
-            // LBL_MarathonName
-            // 
-            this.LBL_MarathonName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LBL_MarathonName.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold);
-            this.LBL_MarathonName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBL_MarathonName.Location = new System.Drawing.Point(131, 0);
-            this.LBL_MarathonName.Name = "LBL_MarathonName";
-            this.LBL_MarathonName.Size = new System.Drawing.Size(481, 79);
-            this.LBL_MarathonName.TabIndex = 23;
-            this.LBL_MarathonName.Text = "Marathon Skills 2024";
-            this.LBL_MarathonName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LBL_TimeToStart
             // 
@@ -380,21 +369,23 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.39554F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.60446F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel1.Controls.Add(this.CMBX_Year, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.LBL_SponsorName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CMBX_Month, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Runner, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LBL_CardOwner, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.LBL_CardNumber, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_CardCVC, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.LBL_CardDate, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.LBL_CardCVC, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_CardNumber, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Name, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_CardOwner, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CMBX_Runner, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 307);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -404,19 +395,21 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(469, 266);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(472, 266);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel2.Controls.Add(this.BTN_Donate, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.LBL_CharitySumm, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateIncrease, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.LBL_CharityAmount, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.BTN_DonateDecrease, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateIncrease, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.TBX_Charity, 1, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(550, 307);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -427,6 +420,70 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(350, 266);
             this.tableLayoutPanel2.TabIndex = 26;
+            // 
+            // CMBX_Runner
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.CMBX_Runner, 2);
+            this.CMBX_Runner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMBX_Runner.FormattingEnabled = true;
+            this.CMBX_Runner.Location = new System.Drawing.Point(227, 47);
+            this.CMBX_Runner.Name = "CMBX_Runner";
+            this.CMBX_Runner.Size = new System.Drawing.Size(242, 33);
+            this.CMBX_Runner.TabIndex = 28;
+            // 
+            // CMBX_Month
+            // 
+            this.CMBX_Month.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMBX_Month.FormattingEnabled = true;
+            this.CMBX_Month.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.CMBX_Month.Location = new System.Drawing.Point(229, 181);
+            this.CMBX_Month.Margin = new System.Windows.Forms.Padding(5);
+            this.CMBX_Month.Name = "CMBX_Month";
+            this.CMBX_Month.Size = new System.Drawing.Size(125, 33);
+            this.CMBX_Month.TabIndex = 27;
+            // 
+            // CMBX_Year
+            // 
+            this.CMBX_Year.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMBX_Year.FormattingEnabled = true;
+            this.CMBX_Year.Items.AddRange(new object[] {
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2034",
+            "2035"});
+            this.CMBX_Year.Location = new System.Drawing.Point(364, 181);
+            this.CMBX_Year.Margin = new System.Windows.Forms.Padding(5);
+            this.CMBX_Year.Name = "CMBX_Year";
+            this.CMBX_Year.Size = new System.Drawing.Size(103, 33);
+            this.CMBX_Year.TabIndex = 28;
+            // 
+            // TBX_Charity
+            // 
+            this.TBX_Charity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TBX_Charity.Location = new System.Drawing.Point(119, 148);
+            this.TBX_Charity.Margin = new System.Windows.Forms.Padding(5);
+            this.TBX_Charity.Name = "TBX_Charity";
+            this.TBX_Charity.Size = new System.Drawing.Size(100, 34);
+            this.TBX_Charity.TabIndex = 23;
+            this.TBX_Charity.TextChanged += new System.EventHandler(this.TBX_Charity_TextChanged);
             // 
             // Sponsor
             // 
@@ -442,18 +499,18 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(930, 688);
             this.MinimumSize = new System.Drawing.Size(930, 688);
             this.Name = "Sponsor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Спонсирование";
             this.Load += new System.EventHandler(this.Sponsor_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -473,12 +530,10 @@
         private System.Windows.Forms.Label LBL_CardNumber;
         private System.Windows.Forms.Label LBL_CardDate;
         private System.Windows.Forms.Label LBL_CardCVC;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TBX_Name;
+        private System.Windows.Forms.TextBox TBX_CardOwner;
+        private System.Windows.Forms.TextBox TBX_CardNumber;
+        private System.Windows.Forms.TextBox TBX_CardCVC;
         private System.Windows.Forms.Label LBL_Charity;
         private System.Windows.Forms.Button BTN_DonateDecrease;
         private System.Windows.Forms.Button BTN_DonateIncrease;
@@ -489,5 +544,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ComboBox CMBX_Runner;
+        private System.Windows.Forms.ComboBox CMBX_Month;
+        private System.Windows.Forms.ComboBox CMBX_Year;
+        private System.Windows.Forms.TextBox TBX_Charity;
     }
 }

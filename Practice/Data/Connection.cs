@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,21 @@ namespace Practice
 
             }
             return con;
+        }
+        public static void SeelectInComboBox(string query, ComboBox cb, string DM, string VM)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable ds = new DataTable();
+            adp.Fill(ds);
+            cb.DataSource = ds;
+            cb.DisplayMember = DM;
+            cb.ValueMember = VM;
+
+            con.Close();
         }
     }
 }
