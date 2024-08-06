@@ -95,10 +95,10 @@ namespace Practice.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Пароль должен быть быть минимум 6 символов, " +
-                        "\nсодержать 1 прописную букву," +
-                        "\n1 цифру и по крайней мере один спецсимвол, " +
-                        "\nа также пароли должны совпадать!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Пароль должен быть быть минимум 6 символов, \n" +
+                        "содержать 1 прописную букву, \n" +
+                        "1 цифру и по крайней мере один спецсимвол, \n" +
+                        "а также пароли должны совпадать!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
