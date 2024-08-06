@@ -106,11 +106,23 @@
     <Compile Include="Forms\FundInfoForm.Designer.cs">
       <DependentUpon>FundInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RunnerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RunnerMenu.Designer.cs">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Sponsor.cs">
       <SubType>Form</SubType>
@@ -129,8 +141,14 @@
     <EmbeddedResource Include="Forms\FundInfoForm.resx">
       <DependentUpon>FundInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RunnerMenu.resx">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sponsor.resx">
       <DependentUpon>Sponsor.cs</DependentUpon>

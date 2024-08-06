@@ -41,5 +41,26 @@ namespace Practice
 
             con.Close();
         }
+        public static string LoginCheck(string login, string password)
+        {
+            string sql_user_check = "SELECT RoleId FROM user WHERE Email LIKE @login AND Password LIKE @password";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql_user_check, con);
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
+            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
+
+            try
+            {
+                string result = cmd.ExecuteScalar().ToString();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

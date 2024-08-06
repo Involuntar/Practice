@@ -116,6 +116,7 @@
             this.BTN_Runner.TabIndex = 3;
             this.BTN_Runner.Text = "Я хочу стать бегуном";
             this.BTN_Runner.UseVisualStyleBackColor = true;
+            this.BTN_Runner.Click += new System.EventHandler(this.BTN_Runner_Click);
             // 
             // BTN_Sponsor
             // 
@@ -152,6 +153,7 @@
             this.BTN_Login.TabIndex = 6;
             this.BTN_Login.Text = "Login";
             this.BTN_Login.UseVisualStyleBackColor = true;
+            this.BTN_Login.Click += new System.EventHandler(this.BTN_Login_Click);
             // 
             // Marathon
             // 

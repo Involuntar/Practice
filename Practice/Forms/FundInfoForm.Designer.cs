@@ -77,7 +77,9 @@
             this.Controls.Add(this.PIC_FundLogo);
             this.Controls.Add(this.LBL_CharityName);
             this.Controls.Add(this.RTBX_FundDesc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FundInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FundInfoForm";
             this.Load += new System.EventHandler(this.FundInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_FundLogo)).EndInit();
