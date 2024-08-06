@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,12 +64,13 @@ namespace Practice.Forms
             string Month = DateOfBirth.Substring(0, 2);
             DateOfBirth = Year + "-" + Month + "-" + Day + " 00:00:00";
             string PasswordPattern = @"(.*[A-Z]+.*\d+.*[!@#$%^]+.*)|(.*\d+.*[A-Z]+.*[!@#$%^]+.*)|(.*\d+.*[!@#$%^]+.*[A-Z]+.*)|(.*[A-Z]+.*[!@#$%^]+.*\d+.*)|(.*[!@#$%^]+.*[A-Z]+.*\d+.*)|(.*[!@#$%^]+.*\d+.*[A-Z]+.*)";
+            Regex rg = new Regex(PasswordPattern);
             if (TBX_Email.Text.Trim() != String.Empty) {
                 if (TBX_Password.Text.Trim() != String.Empty && TBX_Password.Text.Trim() == TBX_RepPassword.Text.Trim() && 
-                    TBX_Password.Text.Trim().Length >= 6) {
+                    TBX_Password.Text.Trim().Length >= 6 && (rg.Matches(TBX_Password.Text.Trim())).Count != 0) {
                     if (TBX_Name.Text.Trim() != String.Empty) {
                         if (TBX_Lastname.Text.Trim() != String.Empty) {
-                            if (Convert.ToDateTime(DtPck_BirthDate.Value.ToString()) - DateTime.Now >= AcceptableAge) {
+                            if (DateTime.Now - Convert.ToDateTime(DtPck_BirthDate.Value.ToString()) >= AcceptableAge) {
                                 Runner runner = new Runner(TBX_Email.Text.Trim(), TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
                                     TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
                                 Connection.RunnerRegister(runner);
@@ -91,8 +93,10 @@ namespace Practice.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Пароль должен быть быть минимум 6 символов, содержать 1 прописную букву," +
-                        "\n1 цифру и по крайней мере один спецсимвол, а также пароли должны совпадать!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Пароль должен быть быть минимум 6 символов, " +
+                        "\nсодержать 1 прописную букву," +
+                        "\n1 цифру и по крайней мере один спецсимвол, " +
+                        "\nа также пароли должны совпадать!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
