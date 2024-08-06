@@ -118,7 +118,7 @@
             // LBL_Name
             // 
             this.LBL_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_Name.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.LBL_Name.Location = new System.Drawing.Point(3, 177);
             this.LBL_Name.Name = "LBL_Name";
             this.LBL_Name.Size = new System.Drawing.Size(213, 59);
