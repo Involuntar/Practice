@@ -180,6 +180,7 @@
             this.Controls.Add(this.LBL_HeaderThanks);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(930, 688);
             this.MinimumSize = new System.Drawing.Size(930, 688);
             this.Name = "ThanksForm";

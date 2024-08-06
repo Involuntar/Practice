@@ -144,6 +144,7 @@
             this.TBX_Password.Location = new System.Drawing.Point(133, 59);
             this.TBX_Password.Margin = new System.Windows.Forms.Padding(10);
             this.TBX_Password.Name = "TBX_Password";
+            this.TBX_Password.PasswordChar = '*';
             this.TBX_Password.Size = new System.Drawing.Size(351, 30);
             this.TBX_Password.TabIndex = 7;
             // 

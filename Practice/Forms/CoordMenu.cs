@@ -11,19 +11,12 @@ using System.Windows.Forms;
 
 namespace Practice.Forms
 {
-    public partial class RunnerMenu : Form
+    public partial class CoordMenu : Form
     {
-        public RunnerMenu()
+        public CoordMenu()
         {
             InitializeComponent();
             timer1.Start();
-        }
-
-        private void BTN_Logout_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Marathon marathon = new Marathon();
-            marathon.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -49,10 +42,11 @@ namespace Practice.Forms
             LBL_TimeToStart.Show();
         }
 
-        private void BTN_Contacts_Click(object sender, EventArgs e)
+        private void BTN_Logout_Click(object sender, EventArgs e)
         {
-            ContactsForm contactsForm = new ContactsForm();
-            contactsForm.ShowDialog();
+            this.Close();
+            Marathon marathon = new Marathon();
+            marathon.Show();
         }
     }
 }
