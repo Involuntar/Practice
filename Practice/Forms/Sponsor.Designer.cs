@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sponsor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.BTN_Back = new System.Windows.Forms.Button();
@@ -55,15 +56,17 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.CMBX_Runner = new System.Windows.Forms.ComboBox();
-            this.CMBX_Month = new System.Windows.Forms.ComboBox();
             this.CMBX_Year = new System.Windows.Forms.ComboBox();
+            this.CMBX_Month = new System.Windows.Forms.ComboBox();
+            this.CMBX_Runner = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.TBX_Charity = new System.Windows.Forms.TextBox();
+            this.PIC_FundInfo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_FundInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -144,10 +147,10 @@
             // LBL_Charity
             // 
             this.LBL_Charity.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Charity.Location = new System.Drawing.Point(563, 268);
+            this.LBL_Charity.Location = new System.Drawing.Point(550, 268);
             this.LBL_Charity.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Charity.Name = "LBL_Charity";
-            this.LBL_Charity.Size = new System.Drawing.Size(326, 32);
+            this.LBL_Charity.Size = new System.Drawing.Size(315, 32);
             this.LBL_Charity.TabIndex = 4;
             this.LBL_Charity.Text = "Благотворительность";
             this.LBL_Charity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -398,38 +401,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(472, 266);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
-            // tableLayoutPanel2
+            // CMBX_Year
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
-            this.tableLayoutPanel2.Controls.Add(this.BTN_Donate, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.LBL_CharitySumm, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.LBL_CharityAmount, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateDecrease, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateIncrease, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.TBX_Charity, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(550, 307);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(350, 266);
-            this.tableLayoutPanel2.TabIndex = 26;
-            // 
-            // CMBX_Runner
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.CMBX_Runner, 2);
-            this.CMBX_Runner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CMBX_Runner.FormattingEnabled = true;
-            this.CMBX_Runner.Location = new System.Drawing.Point(227, 47);
-            this.CMBX_Runner.Name = "CMBX_Runner";
-            this.CMBX_Runner.Size = new System.Drawing.Size(242, 33);
-            this.CMBX_Runner.TabIndex = 28;
+            this.CMBX_Year.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMBX_Year.FormattingEnabled = true;
+            this.CMBX_Year.Items.AddRange(new object[] {
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2034",
+            "2035"});
+            this.CMBX_Year.Location = new System.Drawing.Point(364, 181);
+            this.CMBX_Year.Margin = new System.Windows.Forms.Padding(5);
+            this.CMBX_Year.Name = "CMBX_Year";
+            this.CMBX_Year.Size = new System.Drawing.Size(103, 33);
+            this.CMBX_Year.TabIndex = 28;
             // 
             // CMBX_Month
             // 
@@ -454,26 +445,39 @@
             this.CMBX_Month.Size = new System.Drawing.Size(125, 33);
             this.CMBX_Month.TabIndex = 27;
             // 
-            // CMBX_Year
+            // CMBX_Runner
             // 
-            this.CMBX_Year.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CMBX_Year.FormattingEnabled = true;
-            this.CMBX_Year.Items.AddRange(new object[] {
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2029",
-            "2030",
-            "2031",
-            "2032",
-            "2034",
-            "2035"});
-            this.CMBX_Year.Location = new System.Drawing.Point(364, 181);
-            this.CMBX_Year.Margin = new System.Windows.Forms.Padding(5);
-            this.CMBX_Year.Name = "CMBX_Year";
-            this.CMBX_Year.Size = new System.Drawing.Size(103, 33);
-            this.CMBX_Year.TabIndex = 28;
+            this.tableLayoutPanel1.SetColumnSpan(this.CMBX_Runner, 2);
+            this.CMBX_Runner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMBX_Runner.FormattingEnabled = true;
+            this.CMBX_Runner.Location = new System.Drawing.Point(227, 47);
+            this.CMBX_Runner.Name = "CMBX_Runner";
+            this.CMBX_Runner.Size = new System.Drawing.Size(242, 33);
+            this.CMBX_Runner.TabIndex = 28;
+            this.CMBX_Runner.SelectionChangeCommitted += new System.EventHandler(this.CMBX_Runner_SelectionChangeCommitted);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel2.Controls.Add(this.BTN_Donate, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.LBL_CharitySumm, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.LBL_CharityAmount, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateDecrease, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.BTN_DonateIncrease, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.TBX_Charity, 1, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(550, 307);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(350, 266);
+            this.tableLayoutPanel2.TabIndex = 26;
             // 
             // TBX_Charity
             // 
@@ -485,10 +489,22 @@
             this.TBX_Charity.TabIndex = 23;
             this.TBX_Charity.TextChanged += new System.EventHandler(this.TBX_Charity_TextChanged);
             // 
+            // PIC_FundInfo
+            // 
+            this.PIC_FundInfo.Image = ((System.Drawing.Image)(resources.GetObject("PIC_FundInfo.Image")));
+            this.PIC_FundInfo.Location = new System.Drawing.Point(868, 268);
+            this.PIC_FundInfo.Name = "PIC_FundInfo";
+            this.PIC_FundInfo.Size = new System.Drawing.Size(32, 32);
+            this.PIC_FundInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PIC_FundInfo.TabIndex = 27;
+            this.PIC_FundInfo.TabStop = false;
+            this.PIC_FundInfo.Click += new System.EventHandler(this.PIC_FundInfo_Click);
+            // 
             // Sponsor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.Controls.Add(this.PIC_FundInfo);
             this.Controls.Add(this.LBL_Charity);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LBL_Sponsor_Info);
@@ -511,6 +527,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_FundInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,5 +565,6 @@
         private System.Windows.Forms.ComboBox CMBX_Month;
         private System.Windows.Forms.ComboBox CMBX_Year;
         private System.Windows.Forms.TextBox TBX_Charity;
+        private System.Windows.Forms.PictureBox PIC_FundInfo;
     }
 }

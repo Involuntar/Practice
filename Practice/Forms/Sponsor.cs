@@ -53,22 +53,51 @@ namespace Practice.Forms
 
         private void Sponsor_Load(object sender, EventArgs e)
         {
-            Connection.SeelectInComboBox("SELECT CONCAT(FirstName, ' ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
+            Connection.SeelectInComboBox("SELECT CONCAT(FirstName, ', ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
                 "JOIN runner ON user.Email = runner.Email " +
                 "JOIN country ON country.CountryCode = runner.CountryCode", CMBX_Runner, "Runner", "RunnerId");
-            //DateTime DateToday = DateTime.Now;
-            //DateTime DateEnd = DateToday.AddYears(15);
-            //while (DateEnd > DateToday)
-            //{
-            //    CMBX_Year.Items.Add(Convert.ToString(DateEnd.Year));
-            //    DateEnd.AddYears(-1);
-            //}
-            //CMBX_Month.Items.Add(Convert.ToString(DateToday.Month));
+
+            MySqlConnection con = Connection.GetConnection();
+            string sql = "SELECT CharityName FROM practice.charity WHERE CharityId IN " +
+                "(SELECT CharityId FROM registration WHERE RunnerId IN " +
+                "(SELECT RunnerId FROM runner WHERE RunnerId = @RunnerId));";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@RunnerId", MySqlDbType.VarChar).Value = CMBX_Runner.SelectedValue.ToString();
+            LBL_Charity.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
         }
 
         private void BTN_Donate_Click(object sender, EventArgs e)
         {
+            if (TBX_Name.Text != String.Empty)
+                if (TBX_CardOwner.Text != String.Empty)
+                    if (TBX_CardNumber.Text != String.Empty)
+                        if (TBX_CardCVC.Text != String.Empty)
+                        {
+                            ThanksForm thanks = new ThanksForm();
+                            thanks.Runner = Convert.ToString(CMBX_Runner.SelectedText);
+                            thanks.CharityAmount = LBL_CharityAmount.Text;
 
+                            thanks.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Поле CVC-кода не может быть пустым!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    else
+                    {
+                        MessageBox.Show("Поле номера карты не может быть пустым!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                else
+                {
+                    MessageBox.Show("Поле держателя карты не может быть пустым!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            else
+            {
+                MessageBox.Show("Поле имени не может быть пустым!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void BTN_DonateIncrease_Click(object sender, EventArgs e)
@@ -94,10 +123,10 @@ namespace Practice.Forms
 
         private void TBX_Charity_TextChanged(object sender, EventArgs e)
         {
-            if (TBX_Charity.Text == String.Empty){
+            if (TBX_Charity.Text == String.Empty) {
                 LBL_CharityAmount.Text = "$10";
             }
-            else if (Convert.ToUInt16(TBX_Charity.Text) > 10){
+            else if (Convert.ToUInt16(TBX_Charity.Text) > 10) {
                 LBL_CharityAmount.Text = "$" + TBX_Charity.Text;
                 LBL_CharityAmount.ForeColor = Color.FromArgb(100, 36, 29, 112);
             }
@@ -106,6 +135,37 @@ namespace Practice.Forms
                 LBL_CharityAmount.Text = "$10";
                 LBL_CharityAmount.ForeColor = Color.Red;
             }
+        }
+
+        private void CMBX_Runner_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            MySqlConnection con = Connection.GetConnection();
+            string sql = "SELECT CharityName FROM practice.charity WHERE CharityId IN " +
+                "(SELECT CharityId FROM registration WHERE RunnerId IN " +
+                "(SELECT RunnerId FROM runner WHERE RunnerId = @RunnerId));";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@RunnerId", MySqlDbType.VarChar).Value = CMBX_Runner.SelectedValue.ToString();
+            LBL_Charity.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
+        }
+
+        private void PIC_FundInfo_Click(object sender, EventArgs e)
+        {
+            FundInfoForm infoform = new FundInfoForm();
+
+            MySqlConnection con = Connection.GetConnection();
+            string sql = "SELECT CONCAT(CharityName, '/', CharityDescription, '/',CharityLogo) FROM practice.charity WHERE CharityId IN " +
+                "(SELECT CharityId FROM registration WHERE RunnerId IN " +
+                "(SELECT RunnerId FROM runner WHERE RunnerId = @RunnerId));";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@RunnerId", MySqlDbType.VarChar).Value = CMBX_Runner.SelectedValue.ToString();
+            infoform.Fund = cmd.ExecuteScalar().ToString().Split('/');
+
+            infoform.ShowDialog();
         }
     }
 }

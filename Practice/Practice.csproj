@@ -100,6 +100,12 @@
   <ItemGroup>
     <Compile Include="Data\Connection.cs" />
     <Compile Include="Data\TimeToStart.cs" />
+    <Compile Include="Forms\FundInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FundInfoForm.Designer.cs">
+      <DependentUpon>FundInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,13 +118,25 @@
     <Compile Include="Forms\Sponsor.Designer.cs">
       <DependentUpon>Sponsor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThanksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThanksForm.Designer.cs">
+      <DependentUpon>ThanksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FundInfoForm.resx">
+      <DependentUpon>FundInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sponsor.resx">
       <DependentUpon>Sponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThanksForm.resx">
+      <DependentUpon>ThanksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,6 +147,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="marathon-skills-2016-charity-data\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +164,22 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="marathon-skills-2016-charity-data\arise-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\aves-do-brazil-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\clara-santos-oliveira-institute-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\conquer-cancer-brazil.png" />
+    <Content Include="marathon-skills-2016-charity-data\diabetes-brazil-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\heart-health-sao-paulo-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\human-rights-centre-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\oxfam-international-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\querstadtein-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\save-the-children-fund-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\stay-pumped-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\the-red-cross-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\upbeat-logo.png" />
+    <Content Include="marathon-skills-2016-charity-data\wwsm-rescue-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
