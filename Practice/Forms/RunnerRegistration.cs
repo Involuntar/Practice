@@ -62,6 +62,7 @@ namespace Practice.Forms
             string Day = DateOfBirth.Substring(6, 2);
             string Month = DateOfBirth.Substring(0, 2);
             DateOfBirth = Year + "-" + Month + "-" + Day + " 00:00:00";
+            string PasswordPattern = @"(.*[a-z]+.*\d+[!@#$%^]+.*)|(.*\d+.*[a-z]+.*[!@#$%^]+)|(.*\d+[!@#$%^]+.*[a-z]+.*)|(.*[a-z]+[!@#$%^]+.*.*\d+)|(.*[!@#$%^]+.*[a-z]+.*\d+.*)";
             if (TBX_Email.Text.Trim() != String.Empty) {
                 if (TBX_Password.Text.Trim() != String.Empty && TBX_Password.Text.Trim() == TBX_RepPassword.Text.Trim() && 
                     TBX_Password.Text.Trim().Length >= 6) {
