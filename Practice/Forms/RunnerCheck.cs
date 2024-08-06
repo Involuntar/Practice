@@ -1,5 +1,4 @@
 ﻿using Practice.Data;
-using Practice.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,18 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practice
+namespace Practice.Forms
 {
-    public partial class Marathon : Form
+    public partial class RunnerCheck : Form
     {
-        public Marathon()
+        public RunnerCheck()
         {
             InitializeComponent();
             timer1.Start();
         }
 
-        private void Marathon_Load(object sender, EventArgs e)
+        private void BTN_OldRunner_Click(object sender, EventArgs e)
         {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,25 +49,16 @@ namespace Practice
             LBL_TimeToStart.Show();
         }
 
-        private void BTN_Sponsor_Click(object sender, EventArgs e)
+        private void BTN_NewRunner_Click(object sender, EventArgs e)
         {
-            Sponsor sponsor = new Sponsor();
-            this.Hide();
-            sponsor.Show();
+
         }
 
-        private void BTN_Runner_Click(object sender, EventArgs e)
+        private void BTN_Back_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RunnerCheck runnerCheck = new RunnerCheck();
-            runnerCheck.Show();
-        }
-
-        private void BTN_Login_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
+            this.Close();
+            Marathon marathon = new Marathon();
+            marathon.Show();
         }
     }
 }

@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.BTN_Logout = new System.Windows.Forms.Button();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BTN_Users = new System.Windows.Forms.Button();
             this.BTN_Volunteers = new System.Windows.Forms.Button();
@@ -44,7 +42,6 @@
             this.LBL_AdminMenu = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +49,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.BTN_Logout);
             this.panel1.Controls.Add(this.LBL_MarathonName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,30 +57,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 79);
             this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
-            this.panel2.Controls.Add(this.LBL_TimeToStart);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(481, 33);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(189, 46);
-            this.panel2.TabIndex = 26;
-            // 
-            // LBL_TimeToStart
-            // 
-            this.LBL_TimeToStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
-            this.LBL_TimeToStart.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LBL_TimeToStart.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_TimeToStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBL_TimeToStart.Location = new System.Drawing.Point(0, 0);
-            this.LBL_TimeToStart.Name = "LBL_TimeToStart";
-            this.LBL_TimeToStart.Size = new System.Drawing.Size(863, 46);
-            this.LBL_TimeToStart.TabIndex = 23;
-            this.LBL_TimeToStart.Text = "Время до";
-            this.LBL_TimeToStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LBL_TimeToStart.Visible = false;
             // 
             // BTN_Logout
             // 
@@ -114,26 +86,26 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.LBL_TimeToStart);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 404);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 26;
             // 
-            // label1
+            // LBL_TimeToStart
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 46);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Время до";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
+            this.LBL_TimeToStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
+            this.LBL_TimeToStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_TimeToStart.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_TimeToStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LBL_TimeToStart.Location = new System.Drawing.Point(0, 0);
+            this.LBL_TimeToStart.Name = "LBL_TimeToStart";
+            this.LBL_TimeToStart.Size = new System.Drawing.Size(800, 46);
+            this.LBL_TimeToStart.TabIndex = 23;
+            this.LBL_TimeToStart.Text = "Время до";
+            this.LBL_TimeToStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_TimeToStart.Visible = false;
             // 
             // timer1
             // 
@@ -223,8 +195,7 @@
             // 
             // AdminMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -235,7 +206,6 @@
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -247,10 +217,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BTN_Logout;
         private System.Windows.Forms.Label LBL_MarathonName;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label LBL_TimeToStart;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_TimeToStart;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button BTN_Users;
         private System.Windows.Forms.Button BTN_Volunteers;
