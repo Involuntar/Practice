@@ -36,9 +36,9 @@
             this.LBL_RepPassword = new System.Windows.Forms.Label();
             this.LBL_Name = new System.Windows.Forms.Label();
             this.LBL_Lastname = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CMBX_Sex = new System.Windows.Forms.ComboBox();
+            this.CMBX_Country = new System.Windows.Forms.ComboBox();
+            this.DtPck_BirthDate = new System.Windows.Forms.DateTimePicker();
             this.LBL_Sex = new System.Windows.Forms.Label();
             this.LBL_BirthDate = new System.Windows.Forms.Label();
             this.LBL_Country = new System.Windows.Forms.Label();
@@ -47,12 +47,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TBX_Email = new System.Windows.Forms.TextBox();
+            this.TBX_Password = new System.Windows.Forms.TextBox();
+            this.TBX_RepPassword = new System.Windows.Forms.TextBox();
+            this.TBX_Name = new System.Windows.Forms.TextBox();
+            this.TBX_Lastname = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.BTN_Register = new System.Windows.Forms.Button();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -137,34 +139,35 @@
             this.LBL_Lastname.Text = "Фамилия:";
             this.LBL_Lastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // comboBox1
+            // CMBX_Sex
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(660, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 31);
-            this.comboBox1.TabIndex = 7;
+            this.CMBX_Sex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMBX_Sex.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMBX_Sex.FormattingEnabled = true;
+            this.CMBX_Sex.Location = new System.Drawing.Point(660, 14);
+            this.CMBX_Sex.Name = "CMBX_Sex";
+            this.CMBX_Sex.Size = new System.Drawing.Size(216, 31);
+            this.CMBX_Sex.TabIndex = 7;
             // 
-            // comboBox2
+            // CMBX_Country
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(660, 135);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 31);
-            this.comboBox2.TabIndex = 8;
+            this.CMBX_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMBX_Country.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMBX_Country.FormattingEnabled = true;
+            this.CMBX_Country.Location = new System.Drawing.Point(660, 132);
+            this.CMBX_Country.Name = "CMBX_Country";
+            this.CMBX_Country.Size = new System.Drawing.Size(216, 31);
+            this.CMBX_Country.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // DtPck_BirthDate
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(660, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(216, 30);
-            this.dateTimePicker1.TabIndex = 9;
+            this.DtPck_BirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtPck_BirthDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtPck_BirthDate.Location = new System.Drawing.Point(660, 73);
+            this.DtPck_BirthDate.Name = "DtPck_BirthDate";
+            this.DtPck_BirthDate.Size = new System.Drawing.Size(216, 30);
+            this.DtPck_BirthDate.TabIndex = 9;
+            this.DtPck_BirthDate.Value = new System.DateTime(2024, 8, 6, 21, 56, 22, 0);
             // 
             // LBL_Sex
             // 
@@ -254,50 +257,50 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox1
+            // TBX_Email
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(222, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 30);
-            this.textBox1.TabIndex = 26;
+            this.TBX_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Email.Location = new System.Drawing.Point(222, 14);
+            this.TBX_Email.Name = "TBX_Email";
+            this.TBX_Email.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Email.TabIndex = 26;
             // 
-            // textBox2
+            // TBX_Password
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(222, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 30);
-            this.textBox2.TabIndex = 27;
+            this.TBX_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Password.Location = new System.Drawing.Point(222, 73);
+            this.TBX_Password.Name = "TBX_Password";
+            this.TBX_Password.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Password.TabIndex = 27;
             // 
-            // textBox3
+            // TBX_RepPassword
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(222, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 30);
-            this.textBox3.TabIndex = 28;
+            this.TBX_RepPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_RepPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_RepPassword.Location = new System.Drawing.Point(222, 132);
+            this.TBX_RepPassword.Name = "TBX_RepPassword";
+            this.TBX_RepPassword.Size = new System.Drawing.Size(213, 30);
+            this.TBX_RepPassword.TabIndex = 28;
             // 
-            // textBox4
+            // TBX_Name
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(222, 191);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 30);
-            this.textBox4.TabIndex = 29;
+            this.TBX_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Name.Location = new System.Drawing.Point(222, 191);
+            this.TBX_Name.Name = "TBX_Name";
+            this.TBX_Name.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Name.TabIndex = 29;
             // 
-            // textBox5
+            // TBX_Lastname
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(222, 251);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 30);
-            this.textBox5.TabIndex = 30;
+            this.TBX_Lastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Lastname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Lastname.Location = new System.Drawing.Point(222, 251);
+            this.TBX_Lastname.Name = "TBX_Lastname";
+            this.TBX_Lastname.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Lastname.TabIndex = 30;
             // 
             // tableLayoutPanel1
             // 
@@ -306,20 +309,20 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Password, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_RepPassword, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Name, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Country, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Lastname, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CMBX_Country, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.LBL_BirthDate, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Email, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.DtPck_BirthDate, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Sex, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Email, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Password, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LBL_RepPassword, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CMBX_Sex, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Name, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Lastname, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 215);
@@ -333,12 +336,42 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(879, 297);
             this.tableLayoutPanel1.TabIndex = 31;
             // 
+            // BTN_Register
+            // 
+            this.BTN_Register.BackColor = System.Drawing.SystemColors.Menu;
+            this.BTN_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
+            this.BTN_Register.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BTN_Register.Location = new System.Drawing.Point(316, 535);
+            this.BTN_Register.Margin = new System.Windows.Forms.Padding(20);
+            this.BTN_Register.Name = "BTN_Register";
+            this.BTN_Register.Size = new System.Drawing.Size(138, 38);
+            this.BTN_Register.TabIndex = 32;
+            this.BTN_Register.Text = "Регистрация";
+            this.BTN_Register.UseVisualStyleBackColor = false;
+            this.BTN_Register.Click += new System.EventHandler(this.BTN_Register_Click);
+            // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.BackColor = System.Drawing.SystemColors.Menu;
+            this.BTN_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
+            this.BTN_Cancel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BTN_Cancel.Location = new System.Drawing.Point(510, 535);
+            this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(20);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(127, 38);
+            this.BTN_Cancel.TabIndex = 33;
+            this.BTN_Cancel.Text = "Отмена";
+            this.BTN_Cancel.UseVisualStyleBackColor = false;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
+            // 
             // RunnerRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.Controls.Add(this.BTN_Cancel);
+            this.Controls.Add(this.BTN_Register);
             this.Controls.Add(this.LBL_RegisterDesc);
             this.Controls.Add(this.LBL_RunnerRegister);
             this.Controls.Add(this.panel2);
@@ -346,6 +379,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RunnerRegistration";
             this.Text = "RunnerRegistration";
+            this.Load += new System.EventHandler(this.RunnerRegistration_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -363,9 +397,9 @@
         private System.Windows.Forms.Label LBL_RepPassword;
         private System.Windows.Forms.Label LBL_Name;
         private System.Windows.Forms.Label LBL_Lastname;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox CMBX_Sex;
+        private System.Windows.Forms.ComboBox CMBX_Country;
+        private System.Windows.Forms.DateTimePicker DtPck_BirthDate;
         private System.Windows.Forms.Label LBL_Sex;
         private System.Windows.Forms.Label LBL_BirthDate;
         private System.Windows.Forms.Label LBL_Country;
@@ -374,11 +408,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LBL_TimeToStart;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TBX_Email;
+        private System.Windows.Forms.TextBox TBX_Password;
+        private System.Windows.Forms.TextBox TBX_RepPassword;
+        private System.Windows.Forms.TextBox TBX_Name;
+        private System.Windows.Forms.TextBox TBX_Lastname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button BTN_Register;
+        private System.Windows.Forms.Button BTN_Cancel;
     }
 }

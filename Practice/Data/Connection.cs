@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Practice.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,7 +14,7 @@ namespace Practice
     {
         public static MySqlConnection GetConnection()
         {
-            string sql = "datasource=127.0.0.1;port=3306;username=root;password=Nyp1809!pyN51;database=practice";
+            string sql = "datasource=127.0.0.1;port=3306;username=root;Password=Nyp1809!pyN51;database=practice";
             MySqlConnection con = new MySqlConnection(sql);
             try
             {
@@ -26,7 +27,7 @@ namespace Practice
             }
             return con;
         }
-        public static void SeelectInComboBox(string query, ComboBox cb, string DM, string VM)
+        public static void SelectInComboBox(string query, ComboBox cb, string DM, string VM)
         {
             string sql = query;
             MySqlConnection con = GetConnection();
@@ -41,16 +42,16 @@ namespace Practice
 
             con.Close();
         }
-        public static string LoginCheck(string login, string password)
+        public static string LoginCheck(string Login, string Password)
         {
-            string sql_user_check = "SELECT RoleId FROM user WHERE Email LIKE @login AND Password LIKE @password";
+            string sql_user_check = "SELECT RoleId FROM user WHERE Email LIKE @Login AND Password LIKE @Password";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql_user_check, con);
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
-            cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
+            cmd.Parameters.Add("@Login", MySqlDbType.VarChar).Value = Login;
+            cmd.Parameters.Add("@Password", MySqlDbType.VarChar).Value = Password;
 
             try
             {
@@ -60,6 +61,39 @@ namespace Practice
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+        public static void RunnerRegister(Runner runner)
+        {
+            MySqlConnection conn = GetConnection();
+            string sql_runner = "INSERT INTO runner (Email, Gender, DateOfBirth, CountryCode) VALUES (@Email, @Gender, @DateOfBirth, @CountryCode)";
+            string sql_user = "INSERT INTO user (Email, Password, FirstName, LastName, RoleId) VALUES (@Email, @Password, @FirstName, @LastName, 'R')";
+            
+            MySqlCommand cmd_user = new MySqlCommand (sql_user, conn);
+            MySqlCommand cmd_runner = new MySqlCommand(sql_runner, conn);
+
+            cmd_user.CommandType = CommandType.Text;
+            cmd_runner.CommandType = CommandType.Text;
+
+            cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+            cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+            cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+            cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+
+            cmd_runner.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+            cmd_runner.Parameters.Add("@Gender", MySqlDbType.VarChar).Value = runner.Sex;
+            cmd_runner.Parameters.Add("@DateOfBirth", MySqlDbType.VarChar).Value = runner.DateOfBirth;
+            cmd_runner.Parameters.Add("CountryCode", MySqlDbType.VarChar).Value = runner.CountryCode;
+
+            try
+            {
+                cmd_user.ExecuteNonQuery();
+                cmd_runner.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

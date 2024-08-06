@@ -330,15 +330,18 @@
             // 
             // BTN_Donate
             // 
+            this.BTN_Donate.BackColor = System.Drawing.SystemColors.Menu;
             this.tableLayoutPanel2.SetColumnSpan(this.BTN_Donate, 3);
             this.BTN_Donate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Donate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTN_Donate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
+            this.BTN_Donate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BTN_Donate.Location = new System.Drawing.Point(3, 201);
             this.BTN_Donate.Name = "BTN_Donate";
             this.BTN_Donate.Size = new System.Drawing.Size(344, 62);
             this.BTN_Donate.TabIndex = 22;
             this.BTN_Donate.Text = "Пожертвовать";
-            this.BTN_Donate.UseVisualStyleBackColor = true;
+            this.BTN_Donate.UseVisualStyleBackColor = false;
             this.BTN_Donate.Click += new System.EventHandler(this.BTN_Donate_Click);
             // 
             // LBL_TimeToStart

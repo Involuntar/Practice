@@ -51,7 +51,9 @@ namespace Practice.Forms
 
         private void BTN_NewRunner_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            RunnerRegistration runnerRegistration = new RunnerRegistration();
+            runnerRegistration.Show();
         }
 
         private void BTN_Back_Click(object sender, EventArgs e)

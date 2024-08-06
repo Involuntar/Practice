@@ -53,7 +53,7 @@ namespace Practice.Forms
 
         private void Sponsor_Load(object sender, EventArgs e)
         {
-            Connection.SeelectInComboBox("SELECT CONCAT(FirstName, ', ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
+            Connection.SelectInComboBox("SELECT CONCAT(FirstName, ', ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
                 "JOIN runner ON user.Email = runner.Email " +
                 "JOIN country ON country.CountryCode = runner.CountryCode", CMBX_Runner, "Runner", "RunnerId");
 

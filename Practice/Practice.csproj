@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Connection.cs" />
+    <Compile Include="Data\Runner.cs" />
     <Compile Include="Data\TimeToStart.cs" />
     <Compile Include="Forms\AdminMenu.cs">
       <SubType>Form</SubType>
