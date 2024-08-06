@@ -148,6 +148,12 @@
     <Compile Include="Forms\RunnerMenu.Designer.cs">
       <DependentUpon>RunnerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RunnerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RunnerRegistration.Designer.cs">
+      <DependentUpon>RunnerRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sponsor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunnerMenu.resx">
       <DependentUpon>RunnerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RunnerRegistration.resx">
+      <DependentUpon>RunnerRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sponsor.resx">
       <DependentUpon>Sponsor.cs</DependentUpon>
