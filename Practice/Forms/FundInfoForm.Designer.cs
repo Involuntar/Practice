@@ -48,6 +48,7 @@
             // 
             // PIC_FundLogo
             // 
+            this.PIC_FundLogo.BackColor = System.Drawing.Color.White;
             this.PIC_FundLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PIC_FundLogo.Location = new System.Drawing.Point(0, 76);
             this.PIC_FundLogo.Name = "PIC_FundLogo";

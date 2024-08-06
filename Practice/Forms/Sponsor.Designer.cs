@@ -503,6 +503,7 @@
             // Sponsor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 641);
             this.Controls.Add(this.PIC_FundInfo);
             this.Controls.Add(this.LBL_Charity);
