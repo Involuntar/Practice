@@ -64,10 +64,12 @@ namespace Practice.Forms
             string Month = DateOfBirth.Substring(0, 2);
             DateOfBirth = Year + "-" + Month + "-" + Day + " 00:00:00";
             string PasswordPattern = @"(.*[A-Z]+.*\d+.*[!@#$%^]+.*)|(.*\d+.*[A-Z]+.*[!@#$%^]+.*)|(.*\d+.*[!@#$%^]+.*[A-Z]+.*)|(.*[A-Z]+.*[!@#$%^]+.*\d+.*)|(.*[!@#$%^]+.*[A-Z]+.*\d+.*)|(.*[!@#$%^]+.*\d+.*[A-Z]+.*)";
-            Regex rg = new Regex(PasswordPattern);
-            if (TBX_Email.Text.Trim() != String.Empty) {
+            string EmailPattern = @"(.+@[a-z]+\.[a-z]+\b)";
+            Regex rg_email = new Regex(EmailPattern);
+            Regex rg_password = new Regex(PasswordPattern);
+            if (TBX_Email.Text.Trim() != String.Empty && (rg_email.Matches(TBX_Email.Text.Trim())).Count != 0) {
                 if (TBX_Password.Text.Trim() != String.Empty && TBX_Password.Text.Trim() == TBX_RepPassword.Text.Trim() && 
-                    TBX_Password.Text.Trim().Length >= 6 && (rg.Matches(TBX_Password.Text.Trim())).Count != 0) {
+                    TBX_Password.Text.Trim().Length >= 6 && (rg_password.Matches(TBX_Password.Text.Trim())).Count != 0) {
                     if (TBX_Name.Text.Trim() != String.Empty) {
                         if (TBX_Lastname.Text.Trim() != String.Empty) {
                             if (DateTime.Now - Convert.ToDateTime(DtPck_BirthDate.Value.ToString()) >= AcceptableAge) {
@@ -101,7 +103,7 @@ namespace Practice.Forms
             }
             else
             {
-                MessageBox.Show("Адрес электронной почты не может быть пустым!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Введите существующий email!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
