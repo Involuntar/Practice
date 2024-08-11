@@ -31,32 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TBX_Password = new System.Windows.Forms.TextBox();
-            this.TBX_RepPassword = new System.Windows.Forms.TextBox();
-            this.TBX_Name = new System.Windows.Forms.TextBox();
-            this.LBL_Country = new System.Windows.Forms.Label();
-            this.TBX_Lastname = new System.Windows.Forms.TextBox();
-            this.CMBX_Country = new System.Windows.Forms.ComboBox();
-            this.LBL_BirthDate = new System.Windows.Forms.Label();
-            this.DtPck_BirthDate = new System.Windows.Forms.DateTimePicker();
-            this.LBL_Sex = new System.Windows.Forms.Label();
             this.LBL_Email = new System.Windows.Forms.Label();
-            this.LBL_Password = new System.Windows.Forms.Label();
-            this.LBL_RepPassword = new System.Windows.Forms.Label();
-            this.CMBX_Sex = new System.Windows.Forms.ComboBox();
+            this.LBL_UserEmail = new System.Windows.Forms.Label();
             this.LBL_Name = new System.Windows.Forms.Label();
             this.LBL_Lastname = new System.Windows.Forms.Label();
+            this.LBL_Sex = new System.Windows.Forms.Label();
+            this.LBL_BirthDate = new System.Windows.Forms.Label();
+            this.LBL_Country = new System.Windows.Forms.Label();
+            this.TBX_Name = new System.Windows.Forms.TextBox();
+            this.TBX_Lastname = new System.Windows.Forms.TextBox();
+            this.CMBX_Sex = new System.Windows.Forms.ComboBox();
+            this.DtPck_BirthDate = new System.Windows.Forms.DateTimePicker();
+            this.CMBX_Country = new System.Windows.Forms.ComboBox();
+            this.LBL_Password = new System.Windows.Forms.Label();
+            this.LBL_RepPassword = new System.Windows.Forms.Label();
+            this.TBX_Password = new System.Windows.Forms.TextBox();
+            this.TBX_RepPassword = new System.Windows.Forms.TextBox();
+            this.LBL_PasswordChange = new System.Windows.Forms.Label();
+            this.LBL_PasswordDecision = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
-            this.BTN_Register = new System.Windows.Forms.Button();
+            this.BTN_Save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LBL_RegisterDesc = new System.Windows.Forms.Label();
             this.LBL_RunnerRegister = new System.Windows.Forms.Label();
-            this.LBL_UserEmail = new System.Windows.Forms.Label();
-            this.LBL_PasswordChange = new System.Windows.Forms.Label();
-            this.LBL_PasswordDecision = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,85 +111,50 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(879, 297);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
-            // TBX_Password
+            // LBL_Email
             // 
-            this.TBX_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBX_Password.Location = new System.Drawing.Point(660, 107);
-            this.TBX_Password.Name = "TBX_Password";
-            this.TBX_Password.Size = new System.Drawing.Size(216, 30);
-            this.TBX_Password.TabIndex = 27;
+            this.LBL_Email.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Email.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_Email.Location = new System.Drawing.Point(3, 0);
+            this.LBL_Email.Name = "LBL_Email";
+            this.LBL_Email.Size = new System.Drawing.Size(213, 49);
+            this.LBL_Email.TabIndex = 2;
+            this.LBL_Email.Text = "Email:";
+            this.LBL_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // TBX_RepPassword
+            // LBL_UserEmail
             // 
-            this.TBX_RepPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_RepPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBX_RepPassword.Location = new System.Drawing.Point(660, 156);
-            this.TBX_RepPassword.Name = "TBX_RepPassword";
-            this.TBX_RepPassword.Size = new System.Drawing.Size(216, 30);
-            this.TBX_RepPassword.TabIndex = 28;
+            this.LBL_UserEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LBL_UserEmail.AutoSize = true;
+            this.LBL_UserEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_UserEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_UserEmail.Location = new System.Drawing.Point(222, 11);
+            this.LBL_UserEmail.Name = "LBL_UserEmail";
+            this.LBL_UserEmail.Size = new System.Drawing.Size(213, 26);
+            this.LBL_UserEmail.TabIndex = 31;
+            this.LBL_UserEmail.Text = "email@email.email";
             // 
-            // TBX_Name
+            // LBL_Name
             // 
-            this.TBX_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBX_Name.Location = new System.Drawing.Point(222, 58);
-            this.TBX_Name.Name = "TBX_Name";
-            this.TBX_Name.Size = new System.Drawing.Size(213, 30);
-            this.TBX_Name.TabIndex = 29;
+            this.LBL_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Name.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_Name.Location = new System.Drawing.Point(3, 49);
+            this.LBL_Name.Name = "LBL_Name";
+            this.LBL_Name.Size = new System.Drawing.Size(213, 49);
+            this.LBL_Name.TabIndex = 5;
+            this.LBL_Name.Text = "Имя:";
+            this.LBL_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LBL_Country
+            // LBL_Lastname
             // 
-            this.LBL_Country.AutoSize = true;
-            this.LBL_Country.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Country.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_Country.Location = new System.Drawing.Point(3, 245);
-            this.LBL_Country.Name = "LBL_Country";
-            this.LBL_Country.Size = new System.Drawing.Size(213, 52);
-            this.LBL_Country.TabIndex = 12;
-            this.LBL_Country.Text = "Страна:";
-            this.LBL_Country.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // TBX_Lastname
-            // 
-            this.TBX_Lastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_Lastname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBX_Lastname.Location = new System.Drawing.Point(222, 107);
-            this.TBX_Lastname.Name = "TBX_Lastname";
-            this.TBX_Lastname.Size = new System.Drawing.Size(213, 30);
-            this.TBX_Lastname.TabIndex = 30;
-            // 
-            // CMBX_Country
-            // 
-            this.CMBX_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMBX_Country.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CMBX_Country.FormattingEnabled = true;
-            this.CMBX_Country.Location = new System.Drawing.Point(222, 255);
-            this.CMBX_Country.Name = "CMBX_Country";
-            this.CMBX_Country.Size = new System.Drawing.Size(213, 31);
-            this.CMBX_Country.TabIndex = 8;
-            // 
-            // LBL_BirthDate
-            // 
-            this.LBL_BirthDate.AutoSize = true;
-            this.LBL_BirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_BirthDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_BirthDate.Location = new System.Drawing.Point(3, 196);
-            this.LBL_BirthDate.Name = "LBL_BirthDate";
-            this.LBL_BirthDate.Size = new System.Drawing.Size(213, 49);
-            this.LBL_BirthDate.TabIndex = 11;
-            this.LBL_BirthDate.Text = "Дата рождения:";
-            this.LBL_BirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // DtPck_BirthDate
-            // 
-            this.DtPck_BirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtPck_BirthDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtPck_BirthDate.Location = new System.Drawing.Point(222, 205);
-            this.DtPck_BirthDate.Name = "DtPck_BirthDate";
-            this.DtPck_BirthDate.Size = new System.Drawing.Size(213, 30);
-            this.DtPck_BirthDate.TabIndex = 9;
-            this.DtPck_BirthDate.Value = new System.DateTime(2024, 8, 6, 21, 56, 22, 0);
+            this.LBL_Lastname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Lastname.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_Lastname.Location = new System.Drawing.Point(3, 98);
+            this.LBL_Lastname.Name = "LBL_Lastname";
+            this.LBL_Lastname.Size = new System.Drawing.Size(213, 49);
+            this.LBL_Lastname.TabIndex = 6;
+            this.LBL_Lastname.Text = "Фамилия:";
+            this.LBL_Lastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LBL_Sex
             // 
@@ -204,16 +168,77 @@
             this.LBL_Sex.Text = "Пол:";
             this.LBL_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LBL_Email
+            // LBL_BirthDate
             // 
-            this.LBL_Email.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Email.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_Email.Location = new System.Drawing.Point(3, 0);
-            this.LBL_Email.Name = "LBL_Email";
-            this.LBL_Email.Size = new System.Drawing.Size(213, 49);
-            this.LBL_Email.TabIndex = 2;
-            this.LBL_Email.Text = "Email:";
-            this.LBL_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LBL_BirthDate.AutoSize = true;
+            this.LBL_BirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_BirthDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_BirthDate.Location = new System.Drawing.Point(3, 196);
+            this.LBL_BirthDate.Name = "LBL_BirthDate";
+            this.LBL_BirthDate.Size = new System.Drawing.Size(213, 49);
+            this.LBL_BirthDate.TabIndex = 11;
+            this.LBL_BirthDate.Text = "Дата рождения:";
+            this.LBL_BirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LBL_Country
+            // 
+            this.LBL_Country.AutoSize = true;
+            this.LBL_Country.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Country.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_Country.Location = new System.Drawing.Point(3, 245);
+            this.LBL_Country.Name = "LBL_Country";
+            this.LBL_Country.Size = new System.Drawing.Size(213, 52);
+            this.LBL_Country.TabIndex = 12;
+            this.LBL_Country.Text = "Страна:";
+            this.LBL_Country.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TBX_Name
+            // 
+            this.TBX_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Name.Location = new System.Drawing.Point(222, 58);
+            this.TBX_Name.Name = "TBX_Name";
+            this.TBX_Name.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Name.TabIndex = 29;
+            // 
+            // TBX_Lastname
+            // 
+            this.TBX_Lastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Lastname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Lastname.Location = new System.Drawing.Point(222, 107);
+            this.TBX_Lastname.Name = "TBX_Lastname";
+            this.TBX_Lastname.Size = new System.Drawing.Size(213, 30);
+            this.TBX_Lastname.TabIndex = 30;
+            // 
+            // CMBX_Sex
+            // 
+            this.CMBX_Sex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMBX_Sex.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMBX_Sex.FormattingEnabled = true;
+            this.CMBX_Sex.Location = new System.Drawing.Point(222, 156);
+            this.CMBX_Sex.Name = "CMBX_Sex";
+            this.CMBX_Sex.Size = new System.Drawing.Size(213, 31);
+            this.CMBX_Sex.TabIndex = 7;
+            // 
+            // DtPck_BirthDate
+            // 
+            this.DtPck_BirthDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtPck_BirthDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtPck_BirthDate.Location = new System.Drawing.Point(222, 205);
+            this.DtPck_BirthDate.Name = "DtPck_BirthDate";
+            this.DtPck_BirthDate.Size = new System.Drawing.Size(213, 30);
+            this.DtPck_BirthDate.TabIndex = 9;
+            this.DtPck_BirthDate.Value = new System.DateTime(2024, 8, 6, 21, 56, 22, 0);
+            // 
+            // CMBX_Country
+            // 
+            this.CMBX_Country.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMBX_Country.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMBX_Country.FormattingEnabled = true;
+            this.CMBX_Country.Location = new System.Drawing.Point(222, 255);
+            this.CMBX_Country.Name = "CMBX_Country";
+            this.CMBX_Country.Size = new System.Drawing.Size(213, 31);
+            this.CMBX_Country.TabIndex = 8;
             // 
             // LBL_Password
             // 
@@ -237,37 +262,51 @@
             this.LBL_RepPassword.Text = "Повторите пароль:";
             this.LBL_RepPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CMBX_Sex
+            // TBX_Password
             // 
-            this.CMBX_Sex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMBX_Sex.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CMBX_Sex.FormattingEnabled = true;
-            this.CMBX_Sex.Location = new System.Drawing.Point(222, 156);
-            this.CMBX_Sex.Name = "CMBX_Sex";
-            this.CMBX_Sex.Size = new System.Drawing.Size(213, 31);
-            this.CMBX_Sex.TabIndex = 7;
+            this.TBX_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_Password.Location = new System.Drawing.Point(660, 107);
+            this.TBX_Password.Name = "TBX_Password";
+            this.TBX_Password.Size = new System.Drawing.Size(216, 30);
+            this.TBX_Password.TabIndex = 27;
             // 
-            // LBL_Name
+            // TBX_RepPassword
             // 
-            this.LBL_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Name.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_Name.Location = new System.Drawing.Point(3, 49);
-            this.LBL_Name.Name = "LBL_Name";
-            this.LBL_Name.Size = new System.Drawing.Size(213, 49);
-            this.LBL_Name.TabIndex = 5;
-            this.LBL_Name.Text = "Имя:";
-            this.LBL_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TBX_RepPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_RepPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBX_RepPassword.Location = new System.Drawing.Point(660, 156);
+            this.TBX_RepPassword.Name = "TBX_RepPassword";
+            this.TBX_RepPassword.Size = new System.Drawing.Size(216, 30);
+            this.TBX_RepPassword.TabIndex = 28;
             // 
-            // LBL_Lastname
+            // LBL_PasswordChange
             // 
-            this.LBL_Lastname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Lastname.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_Lastname.Location = new System.Drawing.Point(3, 98);
-            this.LBL_Lastname.Name = "LBL_Lastname";
-            this.LBL_Lastname.Size = new System.Drawing.Size(213, 49);
-            this.LBL_Lastname.TabIndex = 6;
-            this.LBL_Lastname.Text = "Фамилия:";
-            this.LBL_Lastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LBL_PasswordChange.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordChange, 2);
+            this.LBL_PasswordChange.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_PasswordChange.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            this.LBL_PasswordChange.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_PasswordChange.Location = new System.Drawing.Point(441, 0);
+            this.LBL_PasswordChange.Name = "LBL_PasswordChange";
+            this.LBL_PasswordChange.Size = new System.Drawing.Size(435, 49);
+            this.LBL_PasswordChange.TabIndex = 32;
+            this.LBL_PasswordChange.Text = "Смена пароля";
+            this.LBL_PasswordChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LBL_PasswordDecision
+            // 
+            this.LBL_PasswordDecision.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordDecision, 2);
+            this.LBL_PasswordDecision.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_PasswordDecision.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_PasswordDecision.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_PasswordDecision.Location = new System.Drawing.Point(441, 49);
+            this.LBL_PasswordDecision.Name = "LBL_PasswordDecision";
+            this.LBL_PasswordDecision.Size = new System.Drawing.Size(435, 49);
+            this.LBL_PasswordDecision.TabIndex = 33;
+            this.LBL_PasswordDecision.Text = "Оставьте эти поля, незаполненными, \r\nесли Вы не хотите изменять пароль.";
+            this.LBL_PasswordDecision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
@@ -310,18 +349,19 @@
             this.LBL_MarathonName.Text = "Marathon Skills 2024";
             this.LBL_MarathonName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BTN_Register
+            // BTN_Save
             // 
-            this.BTN_Register.BackColor = System.Drawing.SystemColors.Menu;
-            this.BTN_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
-            this.BTN_Register.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BTN_Register.Location = new System.Drawing.Point(316, 535);
-            this.BTN_Register.Margin = new System.Windows.Forms.Padding(20);
-            this.BTN_Register.Name = "BTN_Register";
-            this.BTN_Register.Size = new System.Drawing.Size(138, 38);
-            this.BTN_Register.TabIndex = 39;
-            this.BTN_Register.Text = "Регистрация";
-            this.BTN_Register.UseVisualStyleBackColor = false;
+            this.BTN_Save.BackColor = System.Drawing.SystemColors.Menu;
+            this.BTN_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
+            this.BTN_Save.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BTN_Save.Location = new System.Drawing.Point(316, 535);
+            this.BTN_Save.Margin = new System.Windows.Forms.Padding(20);
+            this.BTN_Save.Name = "BTN_Save";
+            this.BTN_Save.Size = new System.Drawing.Size(138, 38);
+            this.BTN_Save.TabIndex = 39;
+            this.BTN_Save.Text = "Сохранить";
+            this.BTN_Save.UseVisualStyleBackColor = false;
+            this.BTN_Save.Click += new System.EventHandler(this.BTN_Save_Click);
             // 
             // panel1
             // 
@@ -334,84 +374,32 @@
             this.panel1.Size = new System.Drawing.Size(912, 79);
             this.panel1.TabIndex = 36;
             // 
-            // LBL_RegisterDesc
-            // 
-            this.LBL_RegisterDesc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LBL_RegisterDesc.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.LBL_RegisterDesc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_RegisterDesc.Location = new System.Drawing.Point(0, 124);
-            this.LBL_RegisterDesc.Name = "LBL_RegisterDesc";
-            this.LBL_RegisterDesc.Size = new System.Drawing.Size(912, 76);
-            this.LBL_RegisterDesc.TabIndex = 35;
-            this.LBL_RegisterDesc.Text = "Пожалуйста заполните всю информацию, чтобы зарегистрироваться в качестве \r\nбегуна" +
-    "";
-            this.LBL_RegisterDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // LBL_RunnerRegister
             // 
             this.LBL_RunnerRegister.Dock = System.Windows.Forms.DockStyle.Top;
             this.LBL_RunnerRegister.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold);
             this.LBL_RunnerRegister.Location = new System.Drawing.Point(0, 79);
             this.LBL_RunnerRegister.Name = "LBL_RunnerRegister";
-            this.LBL_RunnerRegister.Size = new System.Drawing.Size(912, 45);
+            this.LBL_RunnerRegister.Size = new System.Drawing.Size(912, 93);
             this.LBL_RunnerRegister.TabIndex = 34;
-            this.LBL_RunnerRegister.Text = "Регистрация бегуна";
-            this.LBL_RunnerRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // LBL_UserEmail
-            // 
-            this.LBL_UserEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LBL_UserEmail.AutoSize = true;
-            this.LBL_UserEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_UserEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_UserEmail.Location = new System.Drawing.Point(222, 11);
-            this.LBL_UserEmail.Name = "LBL_UserEmail";
-            this.LBL_UserEmail.Size = new System.Drawing.Size(213, 26);
-            this.LBL_UserEmail.TabIndex = 31;
-            this.LBL_UserEmail.Text = "email@email.email";
-            // 
-            // LBL_PasswordChange
-            // 
-            this.LBL_PasswordChange.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordChange, 2);
-            this.LBL_PasswordChange.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_PasswordChange.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
-            this.LBL_PasswordChange.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_PasswordChange.Location = new System.Drawing.Point(441, 0);
-            this.LBL_PasswordChange.Name = "LBL_PasswordChange";
-            this.LBL_PasswordChange.Size = new System.Drawing.Size(435, 49);
-            this.LBL_PasswordChange.TabIndex = 32;
-            this.LBL_PasswordChange.Text = "Смена пароля";
-            this.LBL_PasswordChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LBL_PasswordDecision
-            // 
-            this.LBL_PasswordDecision.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordDecision, 2);
-            this.LBL_PasswordDecision.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_PasswordDecision.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_PasswordDecision.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_PasswordDecision.Location = new System.Drawing.Point(441, 49);
-            this.LBL_PasswordDecision.Name = "LBL_PasswordDecision";
-            this.LBL_PasswordDecision.Size = new System.Drawing.Size(435, 49);
-            this.LBL_PasswordDecision.TabIndex = 33;
-            this.LBL_PasswordDecision.Text = "Оставьте эти поля, незаполненными, \r\nесли Вы не хотите изменять пароль.";
-            this.LBL_PasswordDecision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_RunnerRegister.Text = "Редактирование профиля";
+            this.LBL_RunnerRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EditProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(912, 641);
-            this.Controls.Add(this.LBL_RegisterDesc);
             this.Controls.Add(this.LBL_RunnerRegister);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.BTN_Register);
+            this.Controls.Add(this.BTN_Save);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditForm";
+            this.Load += new System.EventHandler(this.EditProfile_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -443,9 +431,8 @@
         private System.Windows.Forms.Label LBL_TimeToStart;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LBL_MarathonName;
-        private System.Windows.Forms.Button BTN_Register;
+        private System.Windows.Forms.Button BTN_Save;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LBL_RegisterDesc;
         private System.Windows.Forms.Label LBL_RunnerRegister;
         private System.Windows.Forms.Label LBL_UserEmail;
         private System.Windows.Forms.Label LBL_PasswordChange;

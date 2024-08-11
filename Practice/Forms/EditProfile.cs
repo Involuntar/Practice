@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,9 +14,11 @@ namespace Practice.Forms
 {
     public partial class EditProfile : Form
     {
+        public string UserEmail;
         public EditProfile()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,6 +42,69 @@ namespace Practice.Forms
             }
             LBL_TimeToStart.Text = StringTimeToStart + "!";
             LBL_TimeToStart.Show();
+        }
+
+        private void EditProfile_Load(object sender, EventArgs e)
+        {
+            Connection.SelectInComboBox("SELECT * FROM gender", CMBX_Sex, "Gender", "Gender");
+            Connection.SelectInComboBox("SELECT * FROM country", CMBX_Country, "", "");
+            LBL_UserEmail.Text = UserEmail;
+        }
+
+        private void BTN_Save_Click(object sender, EventArgs e)
+        {
+            TimeSpan AcceptableAge = new TimeSpan(10);
+            string DateOfBirth = DtPck_BirthDate.Value.ToString().Replace('.', '-').Split(' ')[0];
+            string Year = DateOfBirth.Substring(6);
+            string Day = DateOfBirth.Substring(6, 2);
+            string Month = DateOfBirth.Substring(0, 2);
+            DateOfBirth = Year + "-" + Month + "-" + Day + " 00:00:00";
+            string PasswordPattern = @"(.*[A-Z]+.*\d+.*[!@#$%^]+.*)|(.*\d+.*[A-Z]+.*[!@#$%^]+.*)|(.*\d+.*[!@#$%^]+.*[A-Z]+.*)|(.*[A-Z]+.*[!@#$%^]+.*\d+.*)|(.*[!@#$%^]+.*[A-Z]+.*\d+.*)|(.*[!@#$%^]+.*\d+.*[A-Z]+.*)";
+            Regex rg_password = new Regex(PasswordPattern);
+
+            if (TBX_Password.Text.Trim() != String.Empty && TBX_Password.Text.Trim() == TBX_RepPassword.Text.Trim() &&
+                TBX_Password.Text.Trim().Length >= 6 && (rg_password.Matches(TBX_Password.Text.Trim())).Count != 0)
+            {
+                if (TBX_Name.Text.Trim() != String.Empty)
+                {
+                    if (TBX_Lastname.Text.Trim() != String.Empty)
+                    {
+                        if (DateTime.Now - Convert.ToDateTime(DtPck_BirthDate.Value.ToString()) >= AcceptableAge)
+                        {
+                            Runner runner_edit = new Runner(LBL_UserEmail.Text, TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
+                                TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
+                            Connection.UserEdit(runner_edit);
+                            this.Close();
+                            RegisterOnMarathon registerOnMarathon = new RegisterOnMarathon();
+                            registerOnMarathon.Show();
+                            CLear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Вы должны быть не младше 10 лет!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите фамилию!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Введите имя!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пароль должен быть быть минимум 6 символов, \n" +
+                    "содержать 1 прописную букву, \n" +
+                    "1 цифру и по крайней мере один спецсимвол, \n" +
+                    "а также пароли должны совпадать!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void CLear()
+        {
+            TBX_Password.Text = TBX_Name.Text = TBX_Lastname.Text = String.Empty;
         }
     }
 }

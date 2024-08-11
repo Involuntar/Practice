@@ -81,7 +81,7 @@ namespace Practice.Forms
         private void BTN_Reg_Click(object sender, EventArgs e)
         {
             if ((ChBX_21km.Checked || ChBX_42km.Checked || ChBX_5km.Checked) && 
-                Convert.ToUInt16(MTBX_FeeSumm.Text.ToString().Trim()) >= Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]))
+                Convert.ToUInt16(MTBX_FeeSumm.Text.ToString().Trim()) >= Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Trim().Split('$')[1]))
             {
                 this.Close();
                 RunnerConfirm runnerConfirm = new RunnerConfirm();

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using Practice.Data;
 using System;
 using System.Collections.Generic;
@@ -53,14 +54,12 @@ namespace Practice
             cmd.Parameters.Add("@Login", MySqlDbType.VarChar).Value = Login;
             cmd.Parameters.Add("@Password", MySqlDbType.VarChar).Value = Password;
 
-            try
-            {
+            if (cmd.ExecuteScalar() != null) {
                 string result = cmd.ExecuteScalar().ToString();
                 con.Close();
                 return result;
             }
-            catch (Exception ex)
-            {
+            else {
                 con.Close();
                 return null;
             }
@@ -70,8 +69,8 @@ namespace Practice
             MySqlConnection conn = GetConnection();
             string sql_runner = "INSERT INTO runner (Email, Gender, DateOfBirth, CountryCode) VALUES (@Email, @Gender, @DateOfBirth, @CountryCode)";
             string sql_user = "INSERT INTO user (Email, Password, FirstName, LastName, RoleId) VALUES (@Email, @Password, @FirstName, @LastName, 'R')";
-            
-            MySqlCommand cmd_user = new MySqlCommand (sql_user, conn);
+
+            MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
             MySqlCommand cmd_runner = new MySqlCommand(sql_runner, conn);
 
             cmd_user.CommandType = CommandType.Text;
@@ -90,6 +89,69 @@ namespace Practice
             try
             {
                 cmd_user.ExecuteNonQuery();
+                cmd_runner.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public static void UserEdit(Runner runner)
+        {
+            MySqlConnection conn = GetConnection();
+            string sql_runner = "UPDATE runner SET Gender = @Gender, DateOfBirth = @DateOfBirth, CountryCode = @CountryCode";
+            if (runner.Password != String.Empty)
+            {
+                string sql_user = "UPDATE user Password = @Password, FirstName = @FirstName, LastName = @LastName";
+                MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                cmd_user.CommandType = CommandType.Text;
+
+                cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+
+                try
+                {
+                    cmd_user.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                string sql_user = "UPDATE user FirstName = @FirstName, LastName = @LastName";
+                MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                cmd_user.CommandType = CommandType.Text;
+
+                cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+
+                try
+                {
+                    cmd_user.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            MySqlCommand cmd_runner = new MySqlCommand(sql_runner, conn);
+
+            cmd_runner.CommandType = CommandType.Text;
+
+            cmd_runner.Parameters.Add("@Gender", MySqlDbType.VarChar).Value = runner.Sex;
+            cmd_runner.Parameters.Add("@DateOfBirth", MySqlDbType.VarChar).Value = runner.DateOfBirth;
+            cmd_runner.Parameters.Add("CountryCode", MySqlDbType.VarChar).Value = runner.CountryCode;
+
+            try
+            {
                 cmd_runner.ExecuteNonQuery();
                 conn.Close();
             }

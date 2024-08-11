@@ -137,6 +137,7 @@
             this.BTN_EditProfile.TabIndex = 5;
             this.BTN_EditProfile.Text = "Редактирование \r\nпрофиля";
             this.BTN_EditProfile.UseVisualStyleBackColor = false;
+            this.BTN_EditProfile.Click += new System.EventHandler(this.BTN_EditProfile_Click);
             // 
             // BTN_Sponsor
             // 

@@ -54,5 +54,12 @@ namespace Practice.Forms
             ContactsForm contactsForm = new ContactsForm();
             contactsForm.ShowDialog();
         }
+
+        private void BTN_EditProfile_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile = new EditProfile();
+            editProfile.Show();
+            this.Close();
+        }
     }
 }

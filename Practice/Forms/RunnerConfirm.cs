@@ -47,5 +47,12 @@ namespace Practice.Forms
             Marathon marathon = new Marathon();
             marathon.Show();
         }
+
+        private void BTN_OK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            RunnerMenu runner = new RunnerMenu();
+            runner.Show();
+        }
     }
 }
