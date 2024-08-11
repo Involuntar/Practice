@@ -46,7 +46,6 @@
             this.ChBX_21km = new System.Windows.Forms.CheckBox();
             this.ChBX_5km = new System.Windows.Forms.CheckBox();
             this.CMBX_Fund = new System.Windows.Forms.ComboBox();
-            this.TBX_FeeSumm = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Logout = new System.Windows.Forms.Button();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.MTBX_FeeSumm = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_FundInfo)).BeginInit();
@@ -181,13 +181,15 @@
             this.LBL_FeeAmount.Name = "LBL_FeeAmount";
             this.LBL_FeeAmount.Size = new System.Drawing.Size(435, 106);
             this.LBL_FeeAmount.TabIndex = 8;
-            this.LBL_FeeAmount.Text = "$185";
+            this.LBL_FeeAmount.Text = "$0";
             this.LBL_FeeAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RBtn_VariantA
             // 
             this.RBtn_VariantA.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.RBtn_VariantA.AutoSize = true;
+            this.RBtn_VariantA.Checked = true;
+            this.RBtn_VariantA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RBtn_VariantA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBtn_VariantA.Location = new System.Drawing.Point(45, 60);
             this.RBtn_VariantA.Name = "RBtn_VariantA";
@@ -206,9 +208,9 @@
             this.RBtn_VariantB.Name = "RBtn_VariantB";
             this.RBtn_VariantB.Size = new System.Drawing.Size(181, 27);
             this.RBtn_VariantB.TabIndex = 10;
-            this.RBtn_VariantB.TabStop = true;
             this.RBtn_VariantB.Text = "Вариант B ($20):";
             this.RBtn_VariantB.UseVisualStyleBackColor = true;
+            this.RBtn_VariantB.CheckedChanged += new System.EventHandler(this.RBtn_VariantB_CheckedChanged);
             // 
             // RBtn_VariantC
             // 
@@ -219,14 +221,15 @@
             this.RBtn_VariantC.Name = "RBtn_VariantC";
             this.RBtn_VariantC.Size = new System.Drawing.Size(182, 27);
             this.RBtn_VariantC.TabIndex = 11;
-            this.RBtn_VariantC.TabStop = true;
             this.RBtn_VariantC.Text = "Вариант C ($45):";
             this.RBtn_VariantC.UseVisualStyleBackColor = true;
+            this.RBtn_VariantC.CheckedChanged += new System.EventHandler(this.RBtn_VariantC_CheckedChanged);
             // 
             // ChBX_42km
             // 
             this.ChBX_42km.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ChBX_42km.AutoSize = true;
+            this.ChBX_42km.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChBX_42km.Location = new System.Drawing.Point(3, 63);
             this.ChBX_42km.Name = "ChBX_42km";
             this.ChBX_42km.Size = new System.Drawing.Size(214, 20);
@@ -234,11 +237,13 @@
             this.ChBX_42km.Text = "42km Полный марафон($145)";
             this.ChBX_42km.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChBX_42km.UseVisualStyleBackColor = true;
+            this.ChBX_42km.CheckedChanged += new System.EventHandler(this.ChBX_42km_CheckedChanged);
             // 
             // ChBX_21km
             // 
             this.ChBX_21km.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ChBX_21km.AutoSize = true;
+            this.ChBX_21km.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChBX_21km.Location = new System.Drawing.Point(3, 112);
             this.ChBX_21km.Name = "ChBX_21km";
             this.ChBX_21km.Size = new System.Drawing.Size(190, 20);
@@ -246,11 +251,13 @@
             this.ChBX_21km.Text = "21km Полу марафон($75)";
             this.ChBX_21km.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChBX_21km.UseVisualStyleBackColor = true;
+            this.ChBX_21km.CheckedChanged += new System.EventHandler(this.ChBX_21km_CheckedChanged);
             // 
             // ChBX_5km
             // 
             this.ChBX_5km.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ChBX_5km.AutoSize = true;
+            this.ChBX_5km.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChBX_5km.Location = new System.Drawing.Point(3, 163);
             this.ChBX_5km.Name = "ChBX_5km";
             this.ChBX_5km.Size = new System.Drawing.Size(200, 20);
@@ -258,26 +265,18 @@
             this.ChBX_5km.Text = "5km Малая дистанция($20)";
             this.ChBX_5km.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChBX_5km.UseVisualStyleBackColor = true;
+            this.ChBX_5km.CheckedChanged += new System.EventHandler(this.ChBX_5km_CheckedChanged);
             // 
             // CMBX_Fund
             // 
-            this.CMBX_Fund.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMBX_Fund.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMBX_Fund.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CMBX_Fund.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CMBX_Fund.FormattingEnabled = true;
-            this.CMBX_Fund.Location = new System.Drawing.Point(188, 63);
+            this.CMBX_Fund.Location = new System.Drawing.Point(188, 58);
             this.CMBX_Fund.Name = "CMBX_Fund";
             this.CMBX_Fund.Size = new System.Drawing.Size(199, 33);
             this.CMBX_Fund.TabIndex = 15;
-            // 
-            // TBX_FeeSumm
-            // 
-            this.TBX_FeeSumm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TBX_FeeSumm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBX_FeeSumm.Location = new System.Drawing.Point(188, 110);
-            this.TBX_FeeSumm.Name = "TBX_FeeSumm";
-            this.TBX_FeeSumm.Size = new System.Drawing.Size(199, 30);
-            this.TBX_FeeSumm.TabIndex = 16;
-            this.TBX_FeeSumm.Text = "$";
             // 
             // panel1
             // 
@@ -294,6 +293,7 @@
             // BTN_Logout
             // 
             this.BTN_Logout.BackColor = System.Drawing.Color.DarkGray;
+            this.BTN_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Logout.Dock = System.Windows.Forms.DockStyle.Right;
             this.BTN_Logout.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Logout.Location = new System.Drawing.Point(788, 0);
@@ -343,6 +343,7 @@
             // PIC_FundInfo
             // 
             this.PIC_FundInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PIC_FundInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PIC_FundInfo.Image = ((System.Drawing.Image)(resources.GetObject("PIC_FundInfo.Image")));
             this.PIC_FundInfo.Location = new System.Drawing.Point(399, 59);
             this.PIC_FundInfo.Name = "PIC_FundInfo";
@@ -355,6 +356,7 @@
             // BTN_Reg
             // 
             this.BTN_Reg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BTN_Reg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
             this.BTN_Reg.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BTN_Reg.Location = new System.Drawing.Point(3, 156);
@@ -363,10 +365,12 @@
             this.BTN_Reg.TabIndex = 29;
             this.BTN_Reg.Text = "Регистрация";
             this.BTN_Reg.UseVisualStyleBackColor = true;
+            this.BTN_Reg.Click += new System.EventHandler(this.BTN_Reg_Click);
             // 
             // BTN_Cancel
             // 
             this.BTN_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BTN_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
             this.BTN_Cancel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BTN_Cancel.Location = new System.Drawing.Point(232, 156);
@@ -466,8 +470,8 @@
             this.tableLayoutPanel3.Controls.Add(this.LBL_Fund, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.CMBX_Fund, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.PIC_FundInfo, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.TBX_FeeSumm, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.LBL_FeeSumm, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.MTBX_FeeSumm, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 208);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -511,6 +515,19 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(894, 411);
             this.tableLayoutPanel5.TabIndex = 38;
+            // 
+            // MTBX_FeeSumm
+            // 
+            this.MTBX_FeeSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MTBX_FeeSumm.Culture = new System.Globalization.CultureInfo("en-US");
+            this.MTBX_FeeSumm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.MTBX_FeeSumm.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
+            this.MTBX_FeeSumm.Location = new System.Drawing.Point(188, 110);
+            this.MTBX_FeeSumm.Mask = "$00000000";
+            this.MTBX_FeeSumm.Name = "MTBX_FeeSumm";
+            this.MTBX_FeeSumm.ResetOnSpace = false;
+            this.MTBX_FeeSumm.Size = new System.Drawing.Size(199, 30);
+            this.MTBX_FeeSumm.TabIndex = 31;
             // 
             // RegisterOnMarathon
             // 
@@ -561,7 +578,6 @@
         private System.Windows.Forms.CheckBox ChBX_21km;
         private System.Windows.Forms.CheckBox ChBX_5km;
         private System.Windows.Forms.ComboBox CMBX_Fund;
-        private System.Windows.Forms.TextBox TBX_FeeSumm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LBL_MarathonName;
         private System.Windows.Forms.Panel panel2;
@@ -579,5 +595,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.MaskedTextBox MTBX_FeeSumm;
     }
 }
