@@ -177,6 +177,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CoordMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CoordMenu";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -137,6 +137,7 @@
             // LBL_Sponsor_Info
             // 
             this.LBL_Sponsor_Info.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Sponsor_Info.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LBL_Sponsor_Info.Location = new System.Drawing.Point(129, 268);
             this.LBL_Sponsor_Info.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Sponsor_Info.Name = "LBL_Sponsor_Info";
@@ -147,6 +148,7 @@
             // LBL_Charity
             // 
             this.LBL_Charity.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Charity.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LBL_Charity.Location = new System.Drawing.Point(550, 268);
             this.LBL_Charity.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Charity.Name = "LBL_Charity";

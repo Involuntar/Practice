@@ -137,6 +137,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegisterOnMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterOnMarathon.Designer.cs">
+      <DependentUpon>RegisterOnMarathon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RunnerCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterOnMarathon.resx">
+      <DependentUpon>RegisterOnMarathon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunnerCheck.resx">
       <DependentUpon>RunnerCheck.cs</DependentUpon>

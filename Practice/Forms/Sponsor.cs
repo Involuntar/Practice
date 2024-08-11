@@ -166,6 +166,7 @@ namespace Practice.Forms
             infoform.Fund = cmd.ExecuteScalar().ToString().Split('/');
 
             infoform.ShowDialog();
+            con.Close();
         }
     }
 }

@@ -164,6 +164,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerCheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RunnerCheck";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

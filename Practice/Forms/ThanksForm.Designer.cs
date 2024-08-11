@@ -184,6 +184,7 @@
             this.MaximumSize = new System.Drawing.Size(930, 688);
             this.MinimumSize = new System.Drawing.Size(930, 688);
             this.Name = "ThanksForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThanksForm";
             this.Load += new System.EventHandler(this.ThanksForm_Load);
             this.panel1.ResumeLayout(false);

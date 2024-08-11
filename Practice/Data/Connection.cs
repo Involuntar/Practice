@@ -56,10 +56,12 @@ namespace Practice
             try
             {
                 string result = cmd.ExecuteScalar().ToString();
+                con.Close();
                 return result;
             }
             catch (Exception ex)
             {
+                con.Close();
                 return null;
             }
         }

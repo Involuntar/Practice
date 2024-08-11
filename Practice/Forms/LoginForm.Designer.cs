@@ -132,7 +132,7 @@
             this.TBX_Email.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.TBX_Email.Location = new System.Drawing.Point(133, 10);
             this.TBX_Email.Margin = new System.Windows.Forms.Padding(10);
-            this.TBX_Email.Name = "RunnerRegistration";
+            this.TBX_Email.Name = "TBX_Email";
             this.TBX_Email.Size = new System.Drawing.Size(351, 30);
             this.TBX_Email.TabIndex = 6;
             // 
