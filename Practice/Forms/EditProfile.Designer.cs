@@ -55,8 +55,8 @@
             this.LBL_RegisterDesc = new System.Windows.Forms.Label();
             this.LBL_RunnerRegister = new System.Windows.Forms.Label();
             this.LBL_UserEmail = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LBL_PasswordChange = new System.Windows.Forms.Label();
+            this.LBL_PasswordDecision = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,8 +98,8 @@
             this.tableLayoutPanel1.Controls.Add(this.LBL_RepPassword, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.TBX_Password, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.TBX_RepPassword, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LBL_PasswordChange, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LBL_PasswordDecision, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 215);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -272,6 +272,7 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LBL_TimeToStart
             // 
@@ -369,33 +370,33 @@
             this.LBL_UserEmail.TabIndex = 31;
             this.LBL_UserEmail.Text = "email@email.email";
             // 
-            // label2
+            // LBL_PasswordChange
             // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(441, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(435, 49);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Смена пароля";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_PasswordChange.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordChange, 2);
+            this.LBL_PasswordChange.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_PasswordChange.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            this.LBL_PasswordChange.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_PasswordChange.Location = new System.Drawing.Point(441, 0);
+            this.LBL_PasswordChange.Name = "LBL_PasswordChange";
+            this.LBL_PasswordChange.Size = new System.Drawing.Size(435, 49);
+            this.LBL_PasswordChange.TabIndex = 32;
+            this.LBL_PasswordChange.Text = "Смена пароля";
+            this.LBL_PasswordChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // LBL_PasswordDecision
             // 
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(441, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(435, 49);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Оставьте эти поля, незаполненными, \r\nесли Вы не хотите изменять пароль.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_PasswordDecision.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.LBL_PasswordDecision, 2);
+            this.LBL_PasswordDecision.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_PasswordDecision.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_PasswordDecision.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_PasswordDecision.Location = new System.Drawing.Point(441, 49);
+            this.LBL_PasswordDecision.Name = "LBL_PasswordDecision";
+            this.LBL_PasswordDecision.Size = new System.Drawing.Size(435, 49);
+            this.LBL_PasswordDecision.TabIndex = 33;
+            this.LBL_PasswordDecision.Text = "Оставьте эти поля, незаполненными, \r\nесли Вы не хотите изменять пароль.";
+            this.LBL_PasswordDecision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EditProfile
             // 
@@ -447,7 +448,7 @@
         private System.Windows.Forms.Label LBL_RegisterDesc;
         private System.Windows.Forms.Label LBL_RunnerRegister;
         private System.Windows.Forms.Label LBL_UserEmail;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LBL_PasswordChange;
+        private System.Windows.Forms.Label LBL_PasswordDecision;
     }
 }
