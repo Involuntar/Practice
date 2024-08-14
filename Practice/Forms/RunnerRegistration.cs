@@ -78,8 +78,7 @@ namespace Practice.Forms
                                 Connection.RunnerRegister(runner);
                                 RegisterOnMarathon registerOnMarathon = new RegisterOnMarathon();
                                 registerOnMarathon.Show();
-                                EditProfile editProfile = new EditProfile();
-                                editProfile.UserEmail = TBX_Email.Text.Trim();
+                                Runner.UserEmail = TBX_Email.Text.Trim();
                                 this.Close();
                                 CLear();
                             }

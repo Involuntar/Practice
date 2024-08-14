@@ -14,7 +14,6 @@ namespace Practice.Forms
 {
     public partial class EditProfile : Form
     {
-        public string UserEmail;
         public EditProfile()
         {
             InitializeComponent();
@@ -48,7 +47,7 @@ namespace Practice.Forms
         {
             Connection.SelectInComboBox("SELECT * FROM gender", CMBX_Sex, "Gender", "Gender");
             Connection.SelectInComboBox("SELECT * FROM country", CMBX_Country, "CountryName", "CountryCode");
-            LBL_UserEmail.Text = UserEmail;
+            LBL_UserEmail.Text = Runner.UserEmail;
         }
 
         private void BTN_Save_Click(object sender, EventArgs e)

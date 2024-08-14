@@ -80,62 +80,76 @@ namespace Practice.Forms
 
         private void BTN_Reg_Click(object sender, EventArgs e)
         {
-            if ((ChBX_21km.Checked || ChBX_42km.Checked || ChBX_5km.Checked) && 
-                Convert.ToUInt16(MTBX_FeeSumm.Text.ToString().Trim()) >= Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Trim().Split('$')[1]))
+            try
             {
-                this.Close();
-                RunnerConfirm runnerConfirm = new RunnerConfirm();
-                runnerConfirm.Show();
+                string strFeeAmount = MTBX_FeeSumm.Text.Replace("$", "").Trim();
+                UInt16 feeAmount = Convert.ToUInt16(strFeeAmount);
+                if ((ChBX_21km.Checked || ChBX_42km.Checked || ChBX_5km.Checked) &&
+                    feeAmount >= Convert.ToUInt16(LBL_FeeAmount.Text.Trim().Split('$')[1]))
+                {
+                    this.Close();
+                    RunnerConfirm runnerConfirm = new RunnerConfirm();
+                    runnerConfirm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Информация", "Должен быть выбран хотя бы один вид марфона и\n" +
+                        "сумма взноса превышать регистрационный взнос!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-        }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("Информация", "Сумма взноса обязательна к заполнению!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+}
 
         private void ChBX_42km_CheckedChanged(object sender, EventArgs e)
         {
             if (ChBX_42km.Checked == true)
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) + 145);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) + 145);
             else
             {
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) - 145);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) - 145);
             }
         }
 
         private void ChBX_21km_CheckedChanged(object sender, EventArgs e)
         {
             if (ChBX_21km.Checked == true)
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) + 75);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) + 75);
             else
             {
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) - 75);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) - 75);
             }
         }
 
         private void ChBX_5km_CheckedChanged(object sender, EventArgs e)
         {
             if (ChBX_5km.Checked == true)
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) + 20);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) + 20);
             else
             {
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) - 20);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) - 20);
             }
         }
 
         private void RBtn_VariantB_CheckedChanged(object sender, EventArgs e)
         {
             if (RBtn_VariantB.Checked == true)
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) + 20);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) + 20);
             else
             {
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) - 20);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) - 20);
             }
         }
 
         private void RBtn_VariantC_CheckedChanged(object sender, EventArgs e)
         {
             if (RBtn_VariantC.Checked == true)
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) + 45);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) + 45);
             else
             {
-                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.ToString().Split('$')[1]) - 45);
+                LBL_FeeAmount.Text = "$" + (Convert.ToUInt16(LBL_FeeAmount.Text.Split('$')[1]) - 45);
             }
         }
     }

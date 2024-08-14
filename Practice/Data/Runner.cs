@@ -8,6 +8,7 @@ namespace Practice.Data
 {
     class Runner
     {
+        public static string UserEmail;
         public string Email { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }

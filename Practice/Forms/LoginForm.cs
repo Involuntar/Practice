@@ -54,7 +54,7 @@ namespace Practice.Forms
             if (Connection.LoginCheck(TBX_Email.Text.Trim(), TBX_Password.Text.Trim()) == "R")
             {
                 RunnerMenu runnerMenu = new RunnerMenu();
-                runnerMenu.UserEmail = TBX_Email.Text;
+                Runner.UserEmail = TBX_Email.Text.Trim();
                 runnerMenu.Show();
                 this.Close();
             }
