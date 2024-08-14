@@ -13,6 +13,7 @@ namespace Practice.Forms
 {
     public partial class RunnerMenu : Form
     {
+        public string UserEmail;
         public RunnerMenu()
         {
             InitializeComponent();
@@ -58,6 +59,7 @@ namespace Practice.Forms
         private void BTN_EditProfile_Click(object sender, EventArgs e)
         {
             EditProfile editProfile = new EditProfile();
+            editProfile.UserEmail = UserEmail;
             editProfile.Show();
             this.Close();
         }

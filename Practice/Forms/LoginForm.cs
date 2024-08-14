@@ -53,9 +53,8 @@ namespace Practice.Forms
         {
             if (Connection.LoginCheck(TBX_Email.Text.Trim(), TBX_Password.Text.Trim()) == "R")
             {
-                EditProfile editProfile = new EditProfile();
-                editProfile.UserEmail = TBX_Email.Text.Trim();
                 RunnerMenu runnerMenu = new RunnerMenu();
+                runnerMenu.UserEmail = TBX_Email.Text;
                 runnerMenu.Show();
                 this.Close();
             }

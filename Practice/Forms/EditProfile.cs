@@ -47,7 +47,7 @@ namespace Practice.Forms
         private void EditProfile_Load(object sender, EventArgs e)
         {
             Connection.SelectInComboBox("SELECT * FROM gender", CMBX_Sex, "Gender", "Gender");
-            Connection.SelectInComboBox("SELECT * FROM country", CMBX_Country, "", "");
+            Connection.SelectInComboBox("SELECT * FROM country", CMBX_Country, "CountryName", "CountryCode");
             LBL_UserEmail.Text = UserEmail;
         }
 
