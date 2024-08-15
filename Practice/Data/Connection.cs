@@ -28,6 +28,20 @@ namespace Practice
             }
             return con;
         }
+        public static void Display(string query, DataGridView dgv)
+        {
+            string sql = query;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = Runner.UserEmail;
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
+        }
         public static void SelectInComboBox(string query, ComboBox cb, string DM, string VM)
         {
             string sql = query;

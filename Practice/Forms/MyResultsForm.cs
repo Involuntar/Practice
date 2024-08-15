@@ -55,5 +55,21 @@ namespace Practice.Forms
             RunnerMenu runnerMenu = new RunnerMenu();
             runnerMenu.Show();
         }
+        public void Display_Results()
+        {
+            Connection.Display("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY RaceTime) as commonplace FROM event " +
+                "JOIN marathon ON marathon.MarathonId = event.MarathonId " +
+                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
+                "JOIN registrationevent ON registrationevent.EventId = event.EventId " +
+                "JOIN registration ON registration.RegistrationId = registrationevent.RegistrationId " +
+                "JOIN runner ON runner.RunnerId = registration.RunnerId " +
+                "WHERE Email = @Email " +
+                "LIMIT 4", DGV_Results);
+        }
+
+        private void MyResultsForm_Load(object sender, EventArgs e)
+        {
+            Display_Results();
+        }
     }
 }

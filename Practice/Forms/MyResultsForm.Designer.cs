@@ -38,18 +38,18 @@
             this.DGV_Results = new System.Windows.Forms.DataGridView();
             this.BTN_ShowAllResults = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_Logout = new System.Windows.Forms.Button();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.BTN_Back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
-            this.BTN_Logout = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Marathon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commonPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Results)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -184,6 +184,21 @@
             this.panel1.Size = new System.Drawing.Size(925, 79);
             this.panel1.TabIndex = 8;
             // 
+            // BTN_Logout
+            // 
+            this.BTN_Logout.BackColor = System.Drawing.Color.DarkGray;
+            this.BTN_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Logout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BTN_Logout.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.BTN_Logout.Location = new System.Drawing.Point(794, 0);
+            this.BTN_Logout.Margin = new System.Windows.Forms.Padding(5);
+            this.BTN_Logout.Name = "BTN_Logout";
+            this.BTN_Logout.Size = new System.Drawing.Size(131, 79);
+            this.BTN_Logout.TabIndex = 27;
+            this.BTN_Logout.Text = "Logout";
+            this.BTN_Logout.UseVisualStyleBackColor = false;
+            this.BTN_Logout.Click += new System.EventHandler(this.BTN_Logout_Click);
+            // 
             // LBL_MarathonName
             // 
             this.LBL_MarathonName.Dock = System.Windows.Forms.DockStyle.Left;
@@ -235,55 +250,10 @@
             this.LBL_TimeToStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL_TimeToStart.Visible = false;
             // 
-            // BTN_Logout
-            // 
-            this.BTN_Logout.BackColor = System.Drawing.Color.DarkGray;
-            this.BTN_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Logout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BTN_Logout.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.BTN_Logout.Location = new System.Drawing.Point(794, 0);
-            this.BTN_Logout.Margin = new System.Windows.Forms.Padding(5);
-            this.BTN_Logout.Name = "BTN_Logout";
-            this.BTN_Logout.Size = new System.Drawing.Size(131, 79);
-            this.BTN_Logout.TabIndex = 27;
-            this.BTN_Logout.Text = "Logout";
-            this.BTN_Logout.UseVisualStyleBackColor = false;
-            this.BTN_Logout.Click += new System.EventHandler(this.BTN_Logout_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Marathon
-            // 
-            this.Marathon.HeaderText = "Марафон";
-            this.Marathon.MinimumWidth = 6;
-            this.Marathon.Name = "Marathon";
-            // 
-            // Distance
-            // 
-            this.Distance.HeaderText = "Дистанция";
-            this.Distance.MinimumWidth = 6;
-            this.Distance.Name = "Distance";
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Время";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            // 
-            // commonPlace
-            // 
-            this.commonPlace.HeaderText = "Общее место";
-            this.commonPlace.MinimumWidth = 6;
-            this.commonPlace.Name = "commonPlace";
-            // 
-            // categoryPlace
-            // 
-            this.categoryPlace.HeaderText = "Место в категории";
-            this.categoryPlace.MinimumWidth = 6;
-            this.categoryPlace.Name = "categoryPlace";
             // 
             // tableLayoutPanel1
             // 
@@ -309,6 +279,41 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 214);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
+            // Marathon
+            // 
+            this.Marathon.DataPropertyName = "marathon";
+            this.Marathon.HeaderText = "Марафон";
+            this.Marathon.MinimumWidth = 6;
+            this.Marathon.Name = "Marathon";
+            // 
+            // Distance
+            // 
+            this.Distance.DataPropertyName = "distance";
+            this.Distance.HeaderText = "Дистанция";
+            this.Distance.MinimumWidth = 6;
+            this.Distance.Name = "Distance";
+            // 
+            // Time
+            // 
+            this.Time.DataPropertyName = "time";
+            this.Time.HeaderText = "Время";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            // 
+            // commonPlace
+            // 
+            this.commonPlace.DataPropertyName = "commonplace";
+            this.commonPlace.HeaderText = "Общее место";
+            this.commonPlace.MinimumWidth = 6;
+            this.commonPlace.Name = "commonPlace";
+            // 
+            // categoryPlace
+            // 
+            this.categoryPlace.DataPropertyName = "categoryplace";
+            this.categoryPlace.HeaderText = "Место в категории";
+            this.categoryPlace.MinimumWidth = 6;
+            this.categoryPlace.Name = "categoryPlace";
+            // 
             // MyResultsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -322,6 +327,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MyResultsForm";
             this.Text = "MyResultsForm";
+            this.Load += new System.EventHandler(this.MyResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Results)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -347,11 +353,11 @@
         private System.Windows.Forms.Label LBL_TimeToStart;
         private System.Windows.Forms.Button BTN_Logout;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marathon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Distance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn commonPlace;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryPlace;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
