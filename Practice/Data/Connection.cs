@@ -28,19 +28,29 @@ namespace Practice
             }
             return con;
         }
-        public static void Display(string query, DataGridView dgv)
+        public static string[] Display(string displayQuery, string runnerData, DataGridView dgv)
         {
-            string sql = query;
+            string sqlResult = displayQuery;
+            string sqlData = runnerData;
             MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = Runner.UserEmail;
 
-            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            MySqlCommand cmdResult = new MySqlCommand(sqlResult, con);
+            MySqlCommand cmdData = new MySqlCommand(sqlData, con);
+
+            cmdResult.CommandType = CommandType.Text;
+            cmdResult.Parameters.Add("@Email", MySqlDbType.VarChar).Value = Runner.UserEmail;
+
+            cmdData.CommandType = CommandType.Text;
+            cmdData.Parameters.Add("@Email", MySqlDbType.VarChar).Value = Runner.UserEmail;
+
+            string[] data = cmdData.ExecuteScalar().ToString().Split('/');
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmdResult);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
             dgv.DataSource = tbl;
             con.Close();
+            return data;
         }
         public static void SelectInComboBox(string query, ComboBox cb, string DM, string VM)
         {

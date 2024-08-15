@@ -326,6 +326,7 @@
             this.Controls.Add(this.BTN_ShowAllResults);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MyResultsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyResultsForm";
             this.Load += new System.EventHandler(this.MyResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Results)).EndInit();

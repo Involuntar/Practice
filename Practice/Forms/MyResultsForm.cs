@@ -57,14 +57,17 @@ namespace Practice.Forms
         }
         public void Display_Results()
         {
-            Connection.Display("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY RaceTime) as commonplace FROM event " +
+            string[] runnerData = Connection.Display("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY RaceTime) as commonplace FROM event " +
                 "JOIN marathon ON marathon.MarathonId = event.MarathonId " +
                 "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
                 "JOIN registrationevent ON registrationevent.EventId = event.EventId " +
                 "JOIN registration ON registration.RegistrationId = registrationevent.RegistrationId " +
                 "JOIN runner ON runner.RunnerId = registration.RunnerId " +
                 "WHERE Email = @Email " +
-                "LIMIT 4", DGV_Results);
+                "LIMIT 4", "SELECT CONCAT(Gender, '/', DateOfBirth) FROM runner WHERE Email = @Email;", DGV_Results);
+            LBL_RunnerSex.Text = runnerData[0];
+            int runnerAge = Convert.ToUInt16(runnerData[1].Split('-')[0]);
+            LBL_RunnerAge.Text = Convert.ToString(DateTime.Now.Year - runnerAge);
         }
 
         private void MyResultsForm_Load(object sender, EventArgs e)
