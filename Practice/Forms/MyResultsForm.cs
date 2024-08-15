@@ -57,7 +57,7 @@ namespace Practice.Forms
         }
         public void Display_Results()
         {
-            string[] runnerData = Connection.Display("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY RaceTime) as commonplace FROM event " +
+            string[] runnerData = Connection.Display("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY event.EventId) as commonplace FROM event " +
                 "JOIN marathon ON marathon.MarathonId = event.MarathonId " +
                 "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
                 "JOIN registrationevent ON registrationevent.EventId = event.EventId " +

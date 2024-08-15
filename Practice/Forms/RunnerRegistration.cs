@@ -76,8 +76,8 @@ namespace Practice.Forms
                                 Runner runner = new Runner(TBX_Email.Text.Trim(), TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
                                     TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
                                 Connection.RunnerRegister(runner);
-                                RegisterOnMarathon registerOnMarathon = new RegisterOnMarathon();
-                                registerOnMarathon.Show();
+                                RunnerMenu runnerMenu = new RunnerMenu();
+                                runnerMenu.Show();
                                 Runner.UserEmail = TBX_Email.Text.Trim();
                                 this.Close();
                                 CLear();

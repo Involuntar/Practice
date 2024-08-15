@@ -143,6 +143,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MarathonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MarathonInfo.Designer.cs">
+      <DependentUpon>MarathonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MyResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
