@@ -109,6 +109,7 @@
             this.BTN_RegMar.TabIndex = 3;
             this.BTN_RegMar.Text = "Регистрация на \r\nмарафон";
             this.BTN_RegMar.UseVisualStyleBackColor = false;
+            this.BTN_RegMar.Click += new System.EventHandler(this.BTN_RegMar_Click);
             // 
             // BTN_Results
             // 
@@ -123,6 +124,7 @@
             this.BTN_Results.TabIndex = 4;
             this.BTN_Results.Text = "Мои результаты";
             this.BTN_Results.UseVisualStyleBackColor = false;
+            this.BTN_Results.Click += new System.EventHandler(this.BTN_Results_Click);
             // 
             // BTN_EditProfile
             // 

@@ -51,8 +51,8 @@ namespace Practice.Forms
         private void BTN_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            RunnerRegistration runnerRegistration = new RunnerRegistration();
-            runnerRegistration.Show();
+            RunnerMenu runnerMenu = new RunnerMenu();
+            runnerMenu.Show();
         }
 
         private void BTN_Logout_Click(object sender, EventArgs e)

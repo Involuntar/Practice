@@ -11,10 +11,9 @@ using System.Windows.Forms;
 
 namespace Practice.Forms
 {
-    public partial class RunnerMenu : Form
+    public partial class MyResultsForm : Form
     {
-        public string UserEmail;
-        public RunnerMenu()
+        public MyResultsForm()
         {
             InitializeComponent();
             timer1.Start();
@@ -50,31 +49,11 @@ namespace Practice.Forms
             LBL_TimeToStart.Show();
         }
 
-        private void BTN_Contacts_Click(object sender, EventArgs e)
-        {
-            ContactsForm contactsForm = new ContactsForm();
-            contactsForm.ShowDialog();
-        }
-
-        private void BTN_EditProfile_Click(object sender, EventArgs e)
-        {
-            EditProfile editProfile = new EditProfile();
-            editProfile.Show();
-            this.Close();
-        }
-
-        private void BTN_Results_Click(object sender, EventArgs e)
+        private void BTN_Back_Click(object sender, EventArgs e)
         {
             this.Close();
-            MyResultsForm resultsForm = new MyResultsForm();
-            resultsForm.Show();
-        }
-
-        private void BTN_RegMar_Click(object sender, EventArgs e)
-        {
-            RegisterOnMarathon registerOnMarathon = new RegisterOnMarathon();
-            registerOnMarathon.Show();
-            this.Close();
+            RunnerMenu runnerMenu = new RunnerMenu();
+            runnerMenu.Show();
         }
     }
 }

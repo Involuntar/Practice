@@ -73,6 +73,7 @@
             this.BTN_Cancel.TabIndex = 40;
             this.BTN_Cancel.Text = "Отмена";
             this.BTN_Cancel.UseVisualStyleBackColor = false;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // tableLayoutPanel1
             // 
