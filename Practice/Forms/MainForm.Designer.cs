@@ -142,6 +142,7 @@
             this.BTN_About_event.TabIndex = 5;
             this.BTN_About_event.Text = "Я хочу узнать больше о событии";
             this.BTN_About_event.UseVisualStyleBackColor = true;
+            this.BTN_About_event.Click += new System.EventHandler(this.BTN_About_event_Click);
             // 
             // BTN_Login
             // 

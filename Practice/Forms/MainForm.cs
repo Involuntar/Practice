@@ -67,5 +67,12 @@ namespace Practice
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void BTN_About_event_Click(object sender, EventArgs e)
+        {
+            MarathonInfo info = new MarathonInfo();
+            info.Show();
+            this.Hide();
+        }
     }
 }

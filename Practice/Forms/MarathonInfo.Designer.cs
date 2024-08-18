@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarathonInfo));
             this.LBL_MarathonInfo = new System.Windows.Forms.Label();
             this.LBL_MarathonSkillsInfo = new System.Windows.Forms.Label();
             this.LBL_MoreInfo = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LBL_MoreMoreInfo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PIC_Map = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,6 +53,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_Map)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL_MarathonInfo
@@ -86,40 +89,44 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 165);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(155, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(164, 165);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(156, 75);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(3, 246);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(155, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(164, 246);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(156, 78);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
@@ -208,6 +215,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PIC_Map, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 157);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -217,6 +225,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(323, 327);
             this.tableLayoutPanel1.TabIndex = 27;
+            // 
+            // PIC_Map
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.PIC_Map, 2);
+            this.PIC_Map.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PIC_Map.Image = ((System.Drawing.Image)(resources.GetObject("PIC_Map.Image")));
+            this.PIC_Map.Location = new System.Drawing.Point(3, 3);
+            this.PIC_Map.Name = "PIC_Map";
+            this.tableLayoutPanel1.SetRowSpan(this.PIC_Map, 2);
+            this.PIC_Map.Size = new System.Drawing.Size(317, 156);
+            this.PIC_Map.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PIC_Map.TabIndex = 7;
+            this.PIC_Map.TabStop = false;
+            this.PIC_Map.Click += new System.EventHandler(this.PIC_Map_Click);
             // 
             // MarathonInfo
             // 
@@ -239,6 +261,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_Map)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +283,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LBL_MoreMoreInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox PIC_Map;
     }
 }

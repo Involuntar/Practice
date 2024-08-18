@@ -48,5 +48,11 @@ namespace Practice.Forms
             Marathon marathon = new Marathon();
             marathon.Show();
         }
+
+        private void PIC_Map_Click(object sender, EventArgs e)
+        {
+            MapForm mapForm = new MapForm();
+            mapForm.ShowDialog();
+        }
     }
 }
