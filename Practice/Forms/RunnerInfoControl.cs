@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Practice.Forms
 {
-    public partial class MyResultsForm : Form
+    public partial class RunnerInfoControl : Form
     {
-        public MyResultsForm()
+        public RunnerInfoControl()
         {
             InitializeComponent();
             timer1.Start();
@@ -51,28 +51,30 @@ namespace Practice.Forms
 
         private void BTN_Back_Click(object sender, EventArgs e)
         {
+            CoordMenu coordMenu = new CoordMenu();
+            coordMenu.Show();
             this.Close();
-            RunnerMenu runnerMenu = new RunnerMenu();
-            runnerMenu.Show();
-        }
-        public void Display_Results()
-        {
-            string[] runnerData = Connection.Display_Runner("SELECT MarathonName AS marathon, EventTypeName AS distance, RaceTime as time, row_number() OVER (ORDER BY event.EventId) as commonplace FROM event " +
-                "JOIN marathon ON marathon.MarathonId = event.MarathonId " +
-                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
-                "JOIN registrationevent ON registrationevent.EventId = event.EventId " +
-                "JOIN registration ON registration.RegistrationId = registrationevent.RegistrationId " +
-                "JOIN runner ON runner.RunnerId = registration.RunnerId " +
-                "WHERE Email = @Email " +
-                "LIMIT 4", "SELECT CONCAT(Gender, '/', DateOfBirth) FROM runner WHERE Email = @Email;", DGV_Results);
-            LBL_RunnerSex.Text = runnerData[0];
-            int runnerAge = Convert.ToUInt16(runnerData[1].Split('-')[0]);
-            LBL_RunnerAge.Text = Convert.ToString(DateTime.Now.Year - runnerAge);
         }
 
-        private void MyResultsForm_Load(object sender, EventArgs e)
+        private void DGV_Runners_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Display_Results();
+            RunnerControl runnerControl = new RunnerControl();
+            runnerControl.FirstName = DGV_Runners.Rows[e.RowIndex].Cells[1].Value.ToString();
+            runnerControl.LastName = DGV_Runners.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            Runner.UserEmail = DGV_Runners.Rows[e.RowIndex].Cells[3].Value.ToString();
+            runnerControl.Status = DGV_Runners.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+            this.Close();
+            runnerControl.Show();
+        }
+
+        private void RunnerInfoControl_Load(object sender, EventArgs e)
+        {
+            Connection.Display("SELECT FirstName, LastName, user.Email, registrationstatus.RegistrationStatus FROM runner " +
+                "JOIN user ON user.Email = runner.Email " +
+                "JOIN registration ON runner.RunnerId = registration.RunnerId " +
+                "JOIN registrationstatus ON registrationstatus.RegistrationStatusId = registration.RegistrationStatusId", DGV_Runners);
         }
     }
 }

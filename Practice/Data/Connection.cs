@@ -28,7 +28,7 @@ namespace Practice
             }
             return con;
         }
-        public static string[] Display(string displayQuery, string runnerData, DataGridView dgv)
+        public static string[] Display_Runner(string displayQuery, string runnerData, DataGridView dgv)
         {
             string sqlResult = displayQuery;
             string sqlData = runnerData;
@@ -51,6 +51,19 @@ namespace Practice
             dgv.DataSource = tbl;
             con.Close();
             return data;
+        }
+        public static void Display(string displayQuery, DataGridView dgv)
+        {
+            string sql = displayQuery;
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
         }
         public static void SelectInComboBox(string query, ComboBox cb, string DM, string VM)
         {

@@ -124,6 +124,7 @@
             this.BTN_Runners.TabIndex = 27;
             this.BTN_Runners.Text = "Бегуны";
             this.BTN_Runners.UseVisualStyleBackColor = false;
+            this.BTN_Runners.Click += new System.EventHandler(this.BTN_Runners_Click);
             // 
             // BTN_Sponsors
             // 

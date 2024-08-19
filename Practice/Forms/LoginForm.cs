@@ -60,7 +60,9 @@ namespace Practice.Forms
             }
             else if (Connection.LoginCheck(TBX_Email.Text.Trim(), TBX_Password.Text.Trim()) == "C")
             {
-                MessageBox.Show("Coordinator", "",MessageBoxButtons.OK);
+                CoordMenu coordMenu = new CoordMenu();
+                coordMenu.Show();
+                this.Close();
             }
             else if (Connection.LoginCheck(TBX_Email.Text.Trim(), TBX_Password.Text.Trim()) == "A")
             {

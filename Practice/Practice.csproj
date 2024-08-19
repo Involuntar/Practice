@@ -185,6 +185,12 @@
     <Compile Include="Forms\RunnerControl.Designer.cs">
       <DependentUpon>RunnerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RunnerInfoControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RunnerInfoControl.Designer.cs">
+      <DependentUpon>RunnerInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RunnerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     <EmbeddedResource Include="Forms\RunnerControl.resx">
       <DependentUpon>RunnerControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RunnerInfoControl.resx">
+      <DependentUpon>RunnerInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunnerMenu.resx">
       <DependentUpon>RunnerMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,7 +283,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="marathon-skills-2016-charity-data\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -291,22 +299,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="marathon-skills-2016-charity-data\arise-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\aves-do-brazil-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\clara-santos-oliveira-institute-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\conquer-cancer-brazil.png" />
-    <Content Include="marathon-skills-2016-charity-data\diabetes-brazil-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\heart-health-sao-paulo-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\human-rights-centre-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\oxfam-international-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\querstadtein-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\save-the-children-fund-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\stay-pumped-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\the-red-cross-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\upbeat-logo.png" />
-    <Content Include="marathon-skills-2016-charity-data\wwsm-rescue-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
