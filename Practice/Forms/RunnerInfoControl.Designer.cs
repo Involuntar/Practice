@@ -39,25 +39,23 @@
             this.LBL_Sort = new System.Windows.Forms.Label();
             this.LBL_Status = new System.Windows.Forms.Label();
             this.LBL_Distance = new System.Windows.Forms.Label();
-            this.LBL_SortBy = new System.Windows.Forms.Label();
             this.LBL_Load = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DGV_Runners = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BTN_CSV = new System.Windows.Forms.Button();
-            this.BTN_Email = new System.Windows.Forms.Button();
-            this.CMBX_Status = new System.Windows.Forms.ComboBox();
-            this.CMBX_Distance = new System.Windows.Forms.ComboBox();
-            this.CMBX_SortBy = new System.Windows.Forms.ComboBox();
-            this.LBL_TotalRunners = new System.Windows.Forms.Label();
-            this.LBL_AmountRunners = new System.Windows.Forms.Label();
-            this.BTN_Refresh = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.BTN_CSV = new System.Windows.Forms.Button();
+            this.BTN_Email = new System.Windows.Forms.Button();
+            this.CMBX_Status = new System.Windows.Forms.ComboBox();
+            this.CMBX_Distance = new System.Windows.Forms.ComboBox();
+            this.LBL_TotalRunners = new System.Windows.Forms.Label();
+            this.LBL_AmountRunners = new System.Windows.Forms.Label();
+            this.BTN_Refresh = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Runners)).BeginInit();
@@ -193,19 +191,6 @@
             this.LBL_Distance.Text = "Дистанция:";
             this.LBL_Distance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // LBL_SortBy
-            // 
-            this.LBL_SortBy.AutoSize = true;
-            this.LBL_SortBy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_SortBy.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.LBL_SortBy.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_SortBy.Location = new System.Drawing.Point(3, 206);
-            this.LBL_SortBy.Name = "LBL_SortBy";
-            this.LBL_SortBy.Size = new System.Drawing.Size(223, 49);
-            this.LBL_SortBy.TabIndex = 32;
-            this.LBL_SortBy.Text = "Сортировка по:";
-            this.LBL_SortBy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // LBL_Load
             // 
             this.LBL_Load.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -255,6 +240,42 @@
             this.DGV_Runners.TabIndex = 35;
             this.DGV_Runners.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Runners_CellContentClick);
             // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "Имя";
+            this.FirstName.MinimumWidth = 6;
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Фамилия";
+            this.LastName.MinimumWidth = 6;
+            this.LastName.Name = "LastName";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "RegistrationStatus";
+            this.Status.HeaderText = "Статус";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            // 
+            // BTN_Edit
+            // 
+            this.BTN_Edit.HeaderText = "";
+            this.BTN_Edit.MinimumWidth = 6;
+            this.BTN_Edit.Name = "BTN_Edit";
+            this.BTN_Edit.Text = "Edit";
+            this.BTN_Edit.UseColumnTextForButtonValue = true;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -268,15 +289,13 @@
             this.tableLayoutPanel1.Controls.Add(this.LBL_Sort, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Status, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.LBL_Distance, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LBL_SortBy, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.BTN_CSV, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.BTN_Email, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.CMBX_Status, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.CMBX_Distance, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.CMBX_SortBy, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.LBL_TotalRunners, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.LBL_AmountRunners, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.BTN_Refresh, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.BTN_Refresh, 3, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 79);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -322,31 +341,25 @@
             // 
             this.CMBX_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CMBX_Status.FormattingEnabled = true;
+            this.CMBX_Status.Items.AddRange(new object[] {
+            ""});
             this.CMBX_Status.Location = new System.Drawing.Point(232, 108);
             this.CMBX_Status.Name = "CMBX_Status";
             this.CMBX_Status.Size = new System.Drawing.Size(223, 24);
             this.CMBX_Status.TabIndex = 41;
+            this.CMBX_Status.SelectionChangeCommitted += new System.EventHandler(this.CMBX_Status_SelectionChangeCommitted);
             // 
             // CMBX_Distance
             // 
             this.CMBX_Distance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CMBX_Distance.FormattingEnabled = true;
+            this.CMBX_Distance.Items.AddRange(new object[] {
+            ""});
             this.CMBX_Distance.Location = new System.Drawing.Point(232, 166);
             this.CMBX_Distance.Name = "CMBX_Distance";
             this.CMBX_Distance.Size = new System.Drawing.Size(223, 24);
             this.CMBX_Distance.TabIndex = 42;
-            // 
-            // CMBX_SortBy
-            // 
-            this.CMBX_SortBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMBX_SortBy.FormattingEnabled = true;
-            this.CMBX_SortBy.Items.AddRange(new object[] {
-            "Имени",
-            "Фамилии"});
-            this.CMBX_SortBy.Location = new System.Drawing.Point(232, 218);
-            this.CMBX_SortBy.Name = "CMBX_SortBy";
-            this.CMBX_SortBy.Size = new System.Drawing.Size(223, 24);
-            this.CMBX_SortBy.TabIndex = 43;
+            this.CMBX_Distance.SelectionChangeCommitted += new System.EventHandler(this.CMBX_Distance_SelectionChangeCommitted);
             // 
             // LBL_TotalRunners
             // 
@@ -377,53 +390,18 @@
             this.BTN_Refresh.AutoSize = true;
             this.BTN_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic);
             this.BTN_Refresh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BTN_Refresh.Location = new System.Drawing.Point(522, 214);
+            this.BTN_Refresh.Location = new System.Drawing.Point(751, 258);
             this.BTN_Refresh.Name = "BTN_Refresh";
-            this.BTN_Refresh.Size = new System.Drawing.Size(101, 32);
+            this.BTN_Refresh.Size = new System.Drawing.Size(101, 30);
             this.BTN_Refresh.TabIndex = 40;
             this.BTN_Refresh.Text = "Обновить";
             this.BTN_Refresh.UseVisualStyleBackColor = true;
+            this.BTN_Refresh.Click += new System.EventHandler(this.BTN_Refresh_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "Имя";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "Фамилия";
-            this.LastName.MinimumWidth = 6;
-            this.LastName.Name = "LastName";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "RegistrationStatus";
-            this.Status.HeaderText = "Статус";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            // 
-            // BTN_Edit
-            // 
-            this.BTN_Edit.HeaderText = "";
-            this.BTN_Edit.MinimumWidth = 6;
-            this.BTN_Edit.Name = "BTN_Edit";
-            this.BTN_Edit.Text = "Edit";
-            this.BTN_Edit.UseColumnTextForButtonValue = true;
             // 
             // RunnerInfoControl
             // 
@@ -460,7 +438,6 @@
         private System.Windows.Forms.Label LBL_Sort;
         private System.Windows.Forms.Label LBL_Status;
         private System.Windows.Forms.Label LBL_Distance;
-        private System.Windows.Forms.Label LBL_SortBy;
         private System.Windows.Forms.Label LBL_Load;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView DGV_Runners;
@@ -471,7 +448,6 @@
         private System.Windows.Forms.Button BTN_Refresh;
         private System.Windows.Forms.ComboBox CMBX_Status;
         private System.Windows.Forms.ComboBox CMBX_Distance;
-        private System.Windows.Forms.ComboBox CMBX_SortBy;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LBL_AmountRunners;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;

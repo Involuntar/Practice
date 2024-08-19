@@ -65,6 +65,23 @@ namespace Practice
             dgv.DataSource = tbl;
             con.Close();
         }
+        public static void DisplayFiltredRunners(string displayQuery, DataGridView dgv, string distance, string status)
+        {
+            string sql = displayQuery;
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Distance", MySqlDbType.VarChar).Value = distance;
+            cmd.Parameters.Add("@Status", MySqlDbType.VarChar).Value = status;
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
+        }
         public static void SelectInComboBox(string query, ComboBox cb, string DM, string VM)
         {
             string sql = query;

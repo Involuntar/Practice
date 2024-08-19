@@ -13,6 +13,16 @@ namespace Practice.Forms
 {
     public partial class RunnerInfoControl : Form
     {
+        public string STATUS = "1";
+        public string DISTANCE = "FM";
+        public string FILTREDSQL = "SELECT FirstName, LastName, user.Email, registrationstatus.RegistrationStatus FROM runner " +
+                "JOIN user ON user.Email = runner.Email " +
+                "JOIN registration ON runner.RunnerId = registration.RunnerId " +
+                "JOIN registrationstatus ON registrationstatus.RegistrationStatusId = registration.RegistrationStatusId " +
+                "JOIN registrationevent ON registrationevent.RegistrationId = registration.RegistrationId " +
+                "JOIN event ON event.EventId = registrationevent.EventId " +
+                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
+                "WHERE (registration.RegistrationStatusId = @Status) AND (event.EventTypeId = @Distance)";
         public RunnerInfoControl()
         {
             InitializeComponent();
@@ -74,7 +84,28 @@ namespace Practice.Forms
             Connection.Display("SELECT FirstName, LastName, user.Email, registrationstatus.RegistrationStatus FROM runner " +
                 "JOIN user ON user.Email = runner.Email " +
                 "JOIN registration ON runner.RunnerId = registration.RunnerId " +
-                "JOIN registrationstatus ON registrationstatus.RegistrationStatusId = registration.RegistrationStatusId", DGV_Runners);
+                "JOIN registrationstatus ON registrationstatus.RegistrationStatusId = registration.RegistrationStatusId " +
+                "JOIN registrationevent ON registrationevent.RegistrationId = registration.RegistrationId " +
+                "JOIN event ON event.EventId = registrationevent.EventId " +
+                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId", DGV_Runners);
+
+            Connection.SelectInComboBox("SELECT * FROM registrationstatus", CMBX_Status, "RegistrationStatus", "RegistrationStatusId");
+            Connection.SelectInComboBox("SELECT * FROM eventtype", CMBX_Distance, "EventTypeName", "EventTypeId");
+        }
+
+        private void BTN_Refresh_Click(object sender, EventArgs e)
+        {
+            Connection.DisplayFiltredRunners(FILTREDSQL, DGV_Runners, DISTANCE, STATUS);
+        }
+
+        private void CMBX_Status_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            STATUS = CMBX_Status.SelectedValue.ToString();
+        }
+
+        private void CMBX_Distance_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DISTANCE = CMBX_Distance.SelectedValue.ToString();
         }
     }
 }
