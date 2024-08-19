@@ -179,6 +179,12 @@
     <Compile Include="Forms\RunnerConfirm.Designer.cs">
       <DependentUpon>RunnerConfirm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RunnerControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RunnerControl.Designer.cs">
+      <DependentUpon>RunnerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RunnerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunnerConfirm.resx">
       <DependentUpon>RunnerConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RunnerControl.resx">
+      <DependentUpon>RunnerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunnerMenu.resx">
       <DependentUpon>RunnerMenu.cs</DependentUpon>
