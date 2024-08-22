@@ -83,9 +83,7 @@ namespace Practice.Forms
             try
             {
                 string strFeeAmount = MTBX_FeeSumm.Text.Replace("$", "").Trim();
-                UInt16 feeAmount = Convert.ToUInt16(strFeeAmount);
-                if ((ChBX_21km.Checked || ChBX_42km.Checked || ChBX_5km.Checked) &&
-                    feeAmount >= Convert.ToUInt16(LBL_FeeAmount.Text.Trim().Split('$')[1]))
+                if (ChBX_21km.Checked || ChBX_42km.Checked || ChBX_5km.Checked)
                 {
                     this.Close();
                     RunnerConfirm runnerConfirm = new RunnerConfirm();

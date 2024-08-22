@@ -397,6 +397,7 @@
             this.BTN_ShowSertificate.TabIndex = 26;
             this.BTN_ShowSertificate.Text = "Показ \r\nсертификата";
             this.BTN_ShowSertificate.UseVisualStyleBackColor = true;
+            this.BTN_ShowSertificate.Click += new System.EventHandler(this.BTN_ShowSertificate_Click);
             // 
             // BTN_EditProfile
             // 

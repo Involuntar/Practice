@@ -86,6 +86,14 @@ namespace Practice.Forms
             this.Close();
         }
 
+        private void BTN_ShowSertificate_Click(object sender, EventArgs e)
+        {
+            CertificateForm certificateForm = new CertificateForm();
+            certificateForm.STATUS = Status;
+            certificateForm.Show();
+            this.Close();
+        }
+
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
             Marathon marathon = new Marathon();
