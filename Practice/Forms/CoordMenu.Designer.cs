@@ -139,6 +139,7 @@
             this.BTN_Sponsors.TabIndex = 28;
             this.BTN_Sponsors.Text = "Спонсоры";
             this.BTN_Sponsors.UseVisualStyleBackColor = false;
+            this.BTN_Sponsors.Click += new System.EventHandler(this.BTN_Sponsors_Click);
             // 
             // LBL_CoordMenu
             // 

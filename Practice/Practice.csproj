@@ -215,6 +215,12 @@
     <Compile Include="Forms\Sponsor.Designer.cs">
       <DependentUpon>Sponsor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SponsorsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SponsorsView.Designer.cs">
+      <DependentUpon>SponsorsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThanksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sponsor.resx">
       <DependentUpon>Sponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SponsorsView.resx">
+      <DependentUpon>SponsorsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThanksForm.resx">
       <DependentUpon>ThanksForm.cs</DependentUpon>

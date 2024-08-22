@@ -52,6 +52,19 @@ namespace Practice
             con.Close();
             return data;
         }
+        public static void DisplayFunds(string displayQuery, DataGridView dgv)
+        {
+            string sql = displayQuery;
+            MySqlConnection con = GetConnection();
+
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            con.Close();
+        }
         public static void Display(string displayQuery, DataGridView dgv)
         {
             string sql = displayQuery;

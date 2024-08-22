@@ -55,5 +55,12 @@ namespace Practice.Forms
             runnerInfoControl.Show();
             this.Close();
         }
+
+        private void BTN_Sponsors_Click(object sender, EventArgs e)
+        {
+            SponsorsView sponsorsView = new SponsorsView();
+            sponsorsView.Show();
+            this.Close();
+        }
     }
 }
