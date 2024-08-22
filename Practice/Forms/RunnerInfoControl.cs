@@ -74,6 +74,7 @@ namespace Practice.Forms
 
             Runner.UserEmail = DGV_Runners.Rows[e.RowIndex].Cells[3].Value.ToString();
             runnerControl.Status = DGV_Runners.Rows[e.RowIndex].Cells[4].Value.ToString();
+            runnerControl.Distance = DISTANCE;
 
             this.Close();
             runnerControl.Show();
@@ -87,7 +88,8 @@ namespace Practice.Forms
                 "JOIN registrationstatus ON registrationstatus.RegistrationStatusId = registration.RegistrationStatusId " +
                 "JOIN registrationevent ON registrationevent.RegistrationId = registration.RegistrationId " +
                 "JOIN event ON event.EventId = registrationevent.EventId " +
-                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId", DGV_Runners);
+                "JOIN eventtype ON eventtype.EventTypeId = event.EventTypeId " +
+                "WHERE (registration.RegistrationStatusId = 1) AND (event.EventTypeId = 'FM')", DGV_Runners);
 
             Connection.SelectInComboBox("SELECT * FROM registrationstatus", CMBX_Status, "RegistrationStatus", "RegistrationStatusId");
             Connection.SelectInComboBox("SELECT * FROM eventtype", CMBX_Distance, "EventTypeName", "EventTypeId");

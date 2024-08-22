@@ -109,8 +109,6 @@ namespace Practice.Forms
         private void BTN_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            EditProfile editProfile = new EditProfile();
-            editProfile.Show();
         }
     }
 }

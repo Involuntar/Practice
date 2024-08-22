@@ -60,7 +60,6 @@ namespace Practice.Forms
         {
             EditProfile editProfile = new EditProfile();
             editProfile.Show();
-            this.Close();
         }
 
         private void BTN_Results_Click(object sender, EventArgs e)
