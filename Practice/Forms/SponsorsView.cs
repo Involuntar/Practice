@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -50,7 +51,7 @@ namespace Practice.Forms
             con.Close();
 
             LBL_FundsAmount.Text = fundsAmount.ToString();
-            LBL_CharityAmount.Text = "$" + charityAmount.ToString();
+            LBL_CharityAmount.Text = "$" + charityAmount.ToString("#,#", new CultureInfo("de-DE"));
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -74,6 +75,20 @@ namespace Practice.Forms
             }
             LBL_TimeToStart.Text = StringTimeToStart + "!";
             LBL_TimeToStart.Show();
+        }
+
+        private void BTN_Logout_Click(object sender, EventArgs e)
+        {
+            Marathon marathon = new Marathon();
+            marathon.Show();
+            this.Close();
+        }
+
+        private void BTN_Back_Click(object sender, EventArgs e)
+        {
+            CoordMenu coordMenu = new CoordMenu();
+            coordMenu.Show();
+            this.Close();
         }
     }
 }

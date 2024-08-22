@@ -78,6 +78,7 @@
             this.BTN_Logout.TabIndex = 27;
             this.BTN_Logout.Text = "Logout";
             this.BTN_Logout.UseVisualStyleBackColor = false;
+            this.BTN_Logout.Click += new System.EventHandler(this.BTN_Logout_Click);
             // 
             // LBL_MarathonName
             // 
@@ -104,6 +105,7 @@
             this.BTN_Back.TabIndex = 0;
             this.BTN_Back.Text = "Назад";
             this.BTN_Back.UseVisualStyleBackColor = false;
+            this.BTN_Back.Click += new System.EventHandler(this.BTN_Back_Click);
             // 
             // panel1
             // 
