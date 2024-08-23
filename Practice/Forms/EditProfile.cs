@@ -14,6 +14,7 @@ namespace Practice.Forms
 {
     public partial class EditProfile : Form
     {
+        public bool coordFuncs, adminFuncs;
         public EditProfile()
         {
             InitializeComponent();
@@ -47,6 +48,25 @@ namespace Practice.Forms
         {
             Connection.SelectInComboBox("SELECT * FROM gender", CMBX_Sex, "Gender", "Gender");
             Connection.SelectInComboBox("SELECT * FROM country", CMBX_Country, "CountryName", "CountryCode");
+            Connection.SelectInComboBox("SELECT * FROM registrationstatus", CMBX_Status, "RegistrationStatus", "RegistrationStatusId");
+            Connection.SelectInComboBox("SELECT * FROM role", CMBX_Role, "RoleName", "RoleId");
+
+            LBL_Status.Visible = coordFuncs;
+            CMBX_Status.Visible = coordFuncs;
+
+            
+            LBL_Role.Visible = adminFuncs;
+            CMBX_Role.Visible = adminFuncs;
+
+            LBL_Sex.Visible = coordFuncs;
+            CMBX_Sex.Visible = coordFuncs;
+
+            LBL_Country.Visible = coordFuncs;
+            CMBX_Country.Visible = coordFuncs;
+
+            LBL_BirthDate.Visible = coordFuncs;
+            DtPck_BirthDate.Visible = coordFuncs;
+
             LBL_UserEmail.Text = Runner.UserEmail;
         }
 

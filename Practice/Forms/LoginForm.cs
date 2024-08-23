@@ -66,7 +66,9 @@ namespace Practice.Forms
             }
             else if (Connection.LoginCheck(TBX_Email.Text.Trim(), TBX_Password.Text.Trim()) == "A")
             {
-                MessageBox.Show("Admin", "", MessageBoxButtons.OK);
+                AdminMenu adminMenu = new AdminMenu();
+                adminMenu.Show();
+                this.Close();
             }
             else
             {

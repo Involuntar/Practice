@@ -227,6 +227,12 @@
     <Compile Include="Forms\ThanksForm.Designer.cs">
       <DependentUpon>ThanksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserInfoControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminMenu.resx">
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThanksForm.resx">
       <DependentUpon>ThanksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -59,7 +59,8 @@ namespace Practice.Forms
         private void BTN_EditProfile_Click(object sender, EventArgs e)
         {
             EditProfile editProfile = new EditProfile();
-            editProfile.Show();
+            editProfile.coordFuncs = false;
+            editProfile.ShowDialog();
         }
 
         private void BTN_Results_Click(object sender, EventArgs e)

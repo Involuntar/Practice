@@ -124,6 +124,7 @@
             this.BTN_Users.TabIndex = 27;
             this.BTN_Users.Text = "Пользователи";
             this.BTN_Users.UseVisualStyleBackColor = false;
+            this.BTN_Users.Click += new System.EventHandler(this.BTN_Users_Click);
             // 
             // BTN_Volunteers
             // 

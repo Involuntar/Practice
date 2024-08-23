@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Practice.Forms
 {
-    public partial class AdminMenu : Form
+    public partial class UserInfoControl : Form
     {
-        public AdminMenu()
+        public UserInfoControl()
         {
             InitializeComponent();
             timer1.Start();
@@ -42,18 +42,46 @@ namespace Practice.Forms
             LBL_TimeToStart.Show();
         }
 
-        private void BTN_Logout_Click(object sender, EventArgs e)
+        private void UserInfoControl_Load(object sender, EventArgs e)
         {
-            this.Close();
-            Marathon marathon = new Marathon();
-            marathon.Show();
+            Connection.SelectInComboBox("SELECT * FROM role", CMBX_RoleFilter, "RoleName", "RoleId");
+            Connection.Display("SELECT FirstName, LastName, Email, RoleId FROM user WHERE RoleId = 'R'", DGV_Users);
+            LBL_UsersAmount.Text = DGV_Users.RowCount.ToString();
         }
 
-        private void BTN_Users_Click(object sender, EventArgs e)
+        private void BTN_Refresh_Click(object sender, EventArgs e)
         {
-            UserInfoControl userInfoControl = new UserInfoControl();
-            userInfoControl.Show();
+            Connection.Display($"SELECT FirstName, LastName, Email, RoleId FROM `user` WHERE RoleId = '{CMBX_RoleFilter.SelectedValue.ToString()}'", DGV_Users);
+        }
+
+        private void TBX_Search_TextChanged(object sender, EventArgs e)
+        {
+            Connection.Display($"SELECT FirstName, LastName, Email, RoleId FROM `user` " +
+                $"WHERE (FirstName LIKE '" + TBX_Search.Text.Trim().ToString() + "%' " +
+                $"OR LastName LIKE '" + TBX_Search.Text.Trim().ToString() + "%' " +
+                $"OR Email LIKE '" + TBX_Search.Text.Trim().ToString() + "%') " +
+                $"AND RoleId = '{CMBX_RoleFilter.SelectedValue.ToString()}'", DGV_Users);
+        }
+
+        private void BTN_Back_Click(object sender, EventArgs e)
+        {
+            AdminMenu adminMenu = new AdminMenu();
+            adminMenu.Show();
             this.Close();
+        }
+
+        private void BTN_Logout_Click(object sender, EventArgs e)
+        {
+            Marathon marathon = new Marathon();
+            marathon.Show();
+            this.Close();
+        }
+
+        private void DGV_Users_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditProfile editProfile = new EditProfile();
+            Runner.UserEmail = DGV_Users.Rows[e.RowIndex].Cells[5].Value.ToString();
+            editProfile.ShowDialog();
         }
     }
 }
