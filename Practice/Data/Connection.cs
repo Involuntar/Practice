@@ -168,44 +168,103 @@ namespace Practice
         {
             MySqlConnection conn = GetConnection();
             string sql_runner = "UPDATE runner SET Gender = @Gender, DateOfBirth = @DateOfBirth, CountryCode = @CountryCode WHERE Email = @Email";
-            if (runner.Password != String.Empty)
+            string sql_regstatus = "UPDATE registration SET RegistrationStatusId = @RegStatus WHERE RunnerId IN (SELECT RunnerId FROM runner WHERE Email = @Email)";
+            if (runner.Status == String.Empty)
             {
-                string sql_user = "UPDATE user SET Password = @Password, FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
-                MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
-                cmd_user.CommandType = CommandType.Text;
-
-                cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
-                cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
-                cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
-                cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
-
-                try
+                if (runner.Password != String.Empty)
                 {
-                    cmd_user.ExecuteNonQuery();
+                    string sql_user = "UPDATE user SET Password = @Password, FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
+                    MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                    cmd_user.CommandType = CommandType.Text;
+
+                    cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                    cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                    cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                    cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    try
+                    {
+                        cmd_user.ExecuteNonQuery();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string sql_user = "UPDATE user SET FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
+                    MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                    cmd_user.CommandType = CommandType.Text;
+
+                    cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                    cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                    cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                    cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    try
+                    {
+                        cmd_user.ExecuteNonQuery();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
             {
-                string sql_user = "UPDATE user SET FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
-                MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
-                cmd_user.CommandType = CommandType.Text;
-
-                cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
-                cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
-                cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
-                cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
-
-                try
+                if (runner.Password != String.Empty)
                 {
-                    cmd_user.ExecuteNonQuery();
+                    string sql_user = "UPDATE user SET Password = @Password, FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
+                    MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                    MySqlCommand cmd_regstatus = new MySqlCommand(sql_regstatus, conn);
+                    cmd_user.CommandType = CommandType.Text;
+                    cmd_regstatus.CommandType = CommandType.Text;
+
+                    cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                    cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                    cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                    cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    cmd_regstatus.Parameters.Add("@RegStatus", MySqlDbType.VarChar).Value = runner.Status;
+                    cmd_regstatus.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    try
+                    {
+                        cmd_user.ExecuteNonQuery();
+                        cmd_regstatus.ExecuteNonQuery();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string sql_user = "UPDATE user SET FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
+                    MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
+                    MySqlCommand cmd_regstatus = new MySqlCommand(sql_regstatus, conn);
+                    cmd_user.CommandType = CommandType.Text;
+                    cmd_regstatus.CommandType = CommandType.Text;
+
+                    cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
+                    cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
+                    cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                    cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    cmd_regstatus.Parameters.Add("@RegStatus", MySqlDbType.VarChar).Value = runner.Status;
+                    cmd_regstatus.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
+
+                    try
+                    {
+                        cmd_user.ExecuteNonQuery();
+                        cmd_regstatus.ExecuteNonQuery();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
 

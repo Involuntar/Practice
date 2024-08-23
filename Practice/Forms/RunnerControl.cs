@@ -16,7 +16,7 @@ namespace Practice.Forms
 {
     public partial class RunnerControl : Form
     {
-        public string FirstName, LastName, Status, Distance;
+        public string FirstName, LastName, Distance, Status;
         public RunnerControl()
         {
             InitializeComponent();
@@ -24,6 +24,79 @@ namespace Practice.Forms
         }
 
         private void RunnerControl_Load(object sender, EventArgs e)
+        {
+            //LBL_UserFirstName.Text = FirstName;
+            //LBL_UserLastName.Text = LastName;
+            //LBL_UserEmail.Text = Runner.UserEmail;
+
+            //MySqlConnection con = Connection.GetConnection();
+            //string sql_runnerInfo = "SELECT CONCAT(`Gender`, '/' ,`DateOfBirth`, '/' ,`CountryName`, '/' ,`CharityName`, '/' , " +
+            //    "'$', COALESCE((SELECT SUM(`Amount`) FROM sponsorship " +
+            //    "JOIN registration ON registration.RegistrationId = sponsorship.RegistrationId " +
+            //    "JOIN runner ON runner.RunnerId = registration.RunnerId " +
+            //    "WHERE Email = @Email), 0), '/' , " +
+            //    "`RaceKitOption`, '/' , `EventTypeName`, '/', `RegistrationStatus`) FROM practice.runner " +
+            //    "JOIN country ON country.CountryCode = runner.CountryCode " +
+            //    "JOIN registration ON registration.RunnerId = runner.RunnerId " +
+            //    "JOIN registrationstatus ON registration.RegistrationStatusId = registrationstatus.RegistrationStatusId " +
+            //    "JOIN charity ON charity.CharityId = registration.CharityId " +
+            //    "JOIN racekitoption ON racekitoption.RaceKitOptionId = registration.RaceKitOptionId " +
+            //    "JOIN registrationevent ON registration.RegistrationId = registrationevent.RegistrationId " +
+            //    "JOIN `event` ON `event`.EventId = registrationevent.EventId " +
+            //    "JOIN eventtype ON eventtype.EventTypeId = `event`.EventTypeId " +
+            //    "WHERE runner.Email = @Email AND eventtype.EventTypeId = @EventType;";
+            //MySqlCommand cmd_runnerInfo = new MySqlCommand(sql_runnerInfo, con);
+            //cmd_runnerInfo.CommandType = CommandType.Text;
+
+            //cmd_runnerInfo.Parameters.Add("@Email", MySqlDbType.VarChar).Value = Runner.UserEmail;
+            //cmd_runnerInfo.Parameters.Add("@EventType", MySqlDbType.VarChar).Value = Distance;
+
+            //string runnerInfo = cmd_runnerInfo.ExecuteScalar().ToString();
+            //LBL_UserGender.Text = runnerInfo.Split('/')[0];
+            //LBL_UserBirthDate.Text = runnerInfo.Split('/')[1];
+            //LBL_UserCountry.Text = runnerInfo.Split('/')[2];
+            //LBL_UserFund.Text = runnerInfo.Split('/')[3];
+            //LBL_UserCharity.Text = runnerInfo.Split('/')[4];
+            //LBL_UserSet.Text = runnerInfo.Split('/')[5];
+            //LBL_UserDistance.Text = runnerInfo.Split('/')[6];
+            //Status = runnerInfo.Split('/')[7];
+
+            //con.Close();
+
+            //if (Status == "Race Attended")
+            //{
+            //    PIC_Registered.Image = PIC_PaymentConfirm.Image = PIC_SetGiven.Image = PIC_OnStart.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+            //}
+            //else if (Status == "Race Kit Sent")
+            //{
+            //    PIC_Registered.Image = PIC_PaymentConfirm.Image = PIC_SetGiven.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+            //}
+            //else if (Status == "Payment Confirmed")
+            //{
+            //    PIC_Registered.Image = PIC_PaymentConfirm.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+            //}
+            //else if (Status == "Registered")
+            //{
+            //    PIC_Registered.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+            //}
+        }
+
+        private void BTN_Back_Click(object sender, EventArgs e)
+        {
+            RunnerInfoControl runnerInfoControl = new RunnerInfoControl();
+            runnerInfoControl.Show();
+            this.Close();
+        }
+
+        private void BTN_ShowSertificate_Click(object sender, EventArgs e)
+        {
+            CertificateForm certificateForm = new CertificateForm();
+            certificateForm.STATUS = Status;
+            certificateForm.Show();
+            this.Close();
+        }
+
+        private void RunnerControl_Activated(object sender, EventArgs e)
         {
             LBL_UserFirstName.Text = FirstName;
             LBL_UserLastName.Text = LastName;
@@ -35,9 +108,10 @@ namespace Practice.Forms
                 "JOIN registration ON registration.RegistrationId = sponsorship.RegistrationId " +
                 "JOIN runner ON runner.RunnerId = registration.RunnerId " +
                 "WHERE Email = @Email), 0), '/' , " +
-                "`RaceKitOption`, '/' , `EventTypeName`) FROM practice.runner " +
+                "`RaceKitOption`, '/' , `EventTypeName`, '/', `RegistrationStatus`) FROM practice.runner " +
                 "JOIN country ON country.CountryCode = runner.CountryCode " +
                 "JOIN registration ON registration.RunnerId = runner.RunnerId " +
+                "JOIN registrationstatus ON registration.RegistrationStatusId = registrationstatus.RegistrationStatusId " +
                 "JOIN charity ON charity.CharityId = registration.CharityId " +
                 "JOIN racekitoption ON racekitoption.RaceKitOptionId = registration.RaceKitOptionId " +
                 "JOIN registrationevent ON registration.RegistrationId = registrationevent.RegistrationId " +
@@ -58,6 +132,7 @@ namespace Practice.Forms
             LBL_UserCharity.Text = runnerInfo.Split('/')[4];
             LBL_UserSet.Text = runnerInfo.Split('/')[5];
             LBL_UserDistance.Text = runnerInfo.Split('/')[6];
+            Status = runnerInfo.Split('/')[7];
 
             con.Close();
 
@@ -68,30 +143,18 @@ namespace Practice.Forms
             else if (Status == "Race Kit Sent")
             {
                 PIC_Registered.Image = PIC_PaymentConfirm.Image = PIC_SetGiven.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+                PIC_OnStart.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "cross-icon.png"));
             }
             else if (Status == "Payment Confirmed")
             {
                 PIC_Registered.Image = PIC_PaymentConfirm.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+                PIC_SetGiven.Image = PIC_OnStart.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "cross-icon.png"));
             }
             else if (Status == "Registered")
             {
                 PIC_Registered.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "tick-icon.png"));
+                PIC_PaymentConfirm.Image = PIC_SetGiven.Image = PIC_OnStart.Image = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "cross-icon.png"));
             }
-        }
-
-        private void BTN_Back_Click(object sender, EventArgs e)
-        {
-            RunnerInfoControl runnerInfoControl = new RunnerInfoControl();
-            runnerInfoControl.Show();
-            this.Close();
-        }
-
-        private void BTN_ShowSertificate_Click(object sender, EventArgs e)
-        {
-            CertificateForm certificateForm = new CertificateForm();
-            certificateForm.STATUS = Status;
-            certificateForm.Show();
-            this.Close();
         }
 
         private void BTN_Logout_Click(object sender, EventArgs e)
@@ -127,6 +190,14 @@ namespace Practice.Forms
         private void BTN_EditProfile_Click(object sender, EventArgs e)
         {
             EditProfile editProfile = new EditProfile();
+
+            editProfile.FirstName = LBL_UserFirstName.Text;
+            editProfile.LastName = LBL_UserLastName.Text;
+            editProfile.Country = LBL_UserCountry.Text;
+            editProfile.Status = Status;
+            editProfile.Gender = LBL_UserGender.Text;
+            editProfile.BirthDate = LBL_UserBirthDate.Text;
+
             editProfile.formName = "Редактирование профиля бегуна";
             editProfile.adminFuncs = false;
             editProfile.userFuncs = false;

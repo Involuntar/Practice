@@ -74,7 +74,7 @@ namespace Practice.Forms
                         if (TBX_Lastname.Text.Trim() != String.Empty) {
                             if (DateTime.Now - Convert.ToDateTime(DtPck_BirthDate.Value.ToString()) >= AcceptableAge) {
                                 Runner runner = new Runner(TBX_Email.Text.Trim(), TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
-                                    TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
+                                    TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString(), "", "");
                                 Connection.RunnerRegister(runner);
                                 RunnerMenu runnerMenu = new RunnerMenu();
                                 runnerMenu.Show();

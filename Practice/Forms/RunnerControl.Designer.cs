@@ -645,6 +645,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerControl";
             this.Text = "RunnerControl";
+            this.Activated += new System.EventHandler(this.RunnerControl_Activated);
             this.Load += new System.EventHandler(this.RunnerControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -73,7 +73,6 @@ namespace Practice.Forms
             runnerControl.LastName = DGV_Runners.Rows[e.RowIndex].Cells[2].Value.ToString();
 
             Runner.UserEmail = DGV_Runners.Rows[e.RowIndex].Cells[3].Value.ToString();
-            runnerControl.Status = DGV_Runners.Rows[e.RowIndex].Cells[4].Value.ToString();
             runnerControl.Distance = DISTANCE;
 
             this.Close();

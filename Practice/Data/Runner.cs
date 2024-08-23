@@ -16,7 +16,9 @@ namespace Practice.Data
         public string Sex { get; set; }
         public string DateOfBirth { get; set; }
         public string CountryCode { get; set; }
-        public Runner(string email, string password, string firstName, string lastname, string sex, string dateOfBirth, string countryCode)
+        public string Status { get; set; }
+        public string Role {  get; set; }
+        public Runner(string email, string password, string firstName, string lastname, string sex, string dateOfBirth, string countryCode, string status, string role)
         {
             Email = email;
             Password = password;
@@ -25,6 +27,8 @@ namespace Practice.Data
             Sex = sex;
             DateOfBirth = dateOfBirth;
             CountryCode = countryCode;
+            Status = status;
+            Role = role;
         }
     }
 }

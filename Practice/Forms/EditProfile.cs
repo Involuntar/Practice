@@ -18,6 +18,7 @@ namespace Practice.Forms
         public bool passwordChanging = true;
         public string formName;
         public string passwordChange = "Смена пароля";
+        public string FirstName, LastName, Country, Status, Gender, BirthDate;
         public EditProfile()
         {
             InitializeComponent();
@@ -80,6 +81,12 @@ namespace Practice.Forms
             }
 
             LBL_UserEmail.Text = Runner.UserEmail;
+            TBX_Name.Text = FirstName;
+            TBX_Lastname.Text = LastName;
+            CMBX_Country.Text = Country;
+            CMBX_Status.Text = Status;
+            CMBX_Sex.Text = Gender;
+            DtPck_BirthDate.Text = BirthDate;
         }
 
         private void BTN_Save_Click(object sender, EventArgs e)
@@ -87,8 +94,8 @@ namespace Practice.Forms
             TimeSpan AcceptableAge = new TimeSpan(3650, 0, 0, 0);
             string DateOfBirth = DtPck_BirthDate.Value.ToString().Replace('.', '-').Split(' ')[0];
             string Year = DateOfBirth.Substring(6);
-            string Day = DateOfBirth.Substring(6, 2);
-            string Month = DateOfBirth.Substring(0, 2);
+            string Day = DateOfBirth.Substring(0, 2);
+            string Month = DateOfBirth.Substring(3, 2);
             DateOfBirth = Year + "-" + Month + "-" + Day + " 00:00:00";
             string PasswordPattern = @"(.*[A-Z]+.*\d+.*[!@#$%^]+.*)|(.*\d+.*[A-Z]+.*[!@#$%^]+.*)|(.*\d+.*[!@#$%^]+.*[A-Z]+.*)|(.*[A-Z]+.*[!@#$%^]+.*\d+.*)|(.*[!@#$%^]+.*[A-Z]+.*\d+.*)|(.*[!@#$%^]+.*\d+.*[A-Z]+.*)";
             Regex rg_password = new Regex(PasswordPattern);
@@ -103,7 +110,8 @@ namespace Practice.Forms
                         if (Age >= AcceptableAge)
                         {
                             Runner runner_edit = new Runner(LBL_UserEmail.Text, TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
-                                TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
+                                TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, 
+                                CMBX_Country.SelectedValue.ToString(), CMBX_Status.SelectedValue.ToString(), CMBX_Role.SelectedValue.ToString());
                             Connection.UserEdit(runner_edit);
                             this.Close();
                             CLear();
@@ -135,7 +143,8 @@ namespace Practice.Forms
                             if (Age >= AcceptableAge)
                             {
                                 Runner runner_edit = new Runner(LBL_UserEmail.Text, TBX_Password.Text.Trim(), TBX_Name.Text.Trim(),
-                                    TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth, CMBX_Country.SelectedValue.ToString());
+                                TBX_Lastname.Text.Trim(), CMBX_Sex.SelectedValue.ToString(), DateOfBirth,
+                                CMBX_Country.SelectedValue.ToString(), CMBX_Status.SelectedValue.ToString(), CMBX_Role.SelectedValue.ToString());
                                 Connection.UserEdit(runner_edit);
                                 this.Close();
                                 CLear();
