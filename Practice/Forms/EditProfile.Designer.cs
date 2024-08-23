@@ -59,7 +59,7 @@
             this.LBL_MarathonName = new System.Windows.Forms.Label();
             this.BTN_Save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LBL_RunnerRegister = new System.Windows.Forms.Label();
+            this.LBL_RunnerEdit = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -130,6 +130,7 @@
             this.CMBX_Role.Name = "CMBX_Role";
             this.CMBX_Role.Size = new System.Drawing.Size(213, 31);
             this.CMBX_Role.TabIndex = 37;
+            this.CMBX_Role.Visible = false;
             // 
             // LBL_Role
             // 
@@ -142,6 +143,7 @@
             this.LBL_Role.TabIndex = 36;
             this.LBL_Role.Text = "Роль:";
             this.LBL_Role.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LBL_Role.Visible = false;
             // 
             // LBL_Email
             // 
@@ -433,22 +435,22 @@
             this.panel1.Size = new System.Drawing.Size(912, 79);
             this.panel1.TabIndex = 36;
             // 
-            // LBL_RunnerRegister
+            // LBL_RunnerEdit
             // 
-            this.LBL_RunnerRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LBL_RunnerRegister.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold);
-            this.LBL_RunnerRegister.Location = new System.Drawing.Point(0, 79);
-            this.LBL_RunnerRegister.Name = "LBL_RunnerRegister";
-            this.LBL_RunnerRegister.Size = new System.Drawing.Size(912, 93);
-            this.LBL_RunnerRegister.TabIndex = 34;
-            this.LBL_RunnerRegister.Text = "Редактирование профиля";
-            this.LBL_RunnerRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_RunnerEdit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LBL_RunnerEdit.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold);
+            this.LBL_RunnerEdit.Location = new System.Drawing.Point(0, 79);
+            this.LBL_RunnerEdit.Name = "LBL_RunnerEdit";
+            this.LBL_RunnerEdit.Size = new System.Drawing.Size(912, 93);
+            this.LBL_RunnerEdit.TabIndex = 34;
+            this.LBL_RunnerEdit.Text = "Редактирование профиля";
+            this.LBL_RunnerEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EditProfile
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(912, 641);
-            this.Controls.Add(this.LBL_RunnerRegister);
+            this.Controls.Add(this.LBL_RunnerEdit);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
@@ -492,7 +494,7 @@
         private System.Windows.Forms.Label LBL_MarathonName;
         private System.Windows.Forms.Button BTN_Save;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LBL_RunnerRegister;
+        private System.Windows.Forms.Label LBL_RunnerEdit;
         private System.Windows.Forms.Label LBL_UserEmail;
         private System.Windows.Forms.Label LBL_PasswordChange;
         private System.Windows.Forms.Label LBL_PasswordDecision;

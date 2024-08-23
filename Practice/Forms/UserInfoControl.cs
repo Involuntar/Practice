@@ -44,7 +44,7 @@ namespace Practice.Forms
 
         private void UserInfoControl_Load(object sender, EventArgs e)
         {
-            Connection.SelectInComboBox("SELECT * FROM role", CMBX_RoleFilter, "RoleName", "RoleId");
+            Connection.SelectInComboBox("SELECT * FROM role ORDER BY RoleId DESC", CMBX_RoleFilter, "RoleName", "RoleId");
             Connection.Display("SELECT FirstName, LastName, Email, RoleId FROM user WHERE RoleId = 'R'", DGV_Users);
             LBL_UsersAmount.Text = DGV_Users.RowCount.ToString();
         }
@@ -80,7 +80,21 @@ namespace Practice.Forms
         private void DGV_Users_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             EditProfile editProfile = new EditProfile();
-            Runner.UserEmail = DGV_Users.Rows[e.RowIndex].Cells[5].Value.ToString();
+            editProfile.adminFuncs = true;
+            editProfile.userFuncs = false;
+            editProfile.formName = "Редактирование пользователя";
+            Runner.UserEmail = DGV_Users.Rows[e.RowIndex].Cells[3].Value.ToString();
+            editProfile.ShowDialog();
+        }
+
+        private void BTN_AddNew_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile = new EditProfile();
+            editProfile.passwordChanging = false;
+            editProfile.adminFuncs = true;
+            editProfile.userFuncs = false;
+            editProfile.passwordChange = "Новый пароль";
+            editProfile.formName = "Добавление пользователя";
             editProfile.ShowDialog();
         }
     }

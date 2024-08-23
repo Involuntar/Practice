@@ -167,21 +167,21 @@ namespace Practice
         public static void UserEdit(Runner runner)
         {
             MySqlConnection conn = GetConnection();
-            string sql_runner = "UPDATE runner SET Gender = @Gender, DateOfBirth = @DateOfBirth, CountryCode = @CountryCode";
+            string sql_runner = "UPDATE runner SET Gender = @Gender, DateOfBirth = @DateOfBirth, CountryCode = @CountryCode WHERE Email = @Email";
             if (runner.Password != String.Empty)
             {
-                string sql_user = "UPDATE user Password = @Password, FirstName = @FirstName, LastName = @LastName";
+                string sql_user = "UPDATE user SET Password = @Password, FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
                 MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
                 cmd_user.CommandType = CommandType.Text;
 
                 cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
                 cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
                 cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
 
                 try
                 {
                     cmd_user.ExecuteNonQuery();
-                    conn.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -190,18 +190,18 @@ namespace Practice
             }
             else
             {
-                string sql_user = "UPDATE user FirstName = @FirstName, LastName = @LastName";
+                string sql_user = "UPDATE user SET FirstName = @FirstName, LastName = @LastName WHERE Email = @Email";
                 MySqlCommand cmd_user = new MySqlCommand(sql_user, conn);
                 cmd_user.CommandType = CommandType.Text;
 
                 cmd_user.Parameters.Add("@Password", MySqlDbType.VarChar).Value = runner.Password;
                 cmd_user.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = runner.FirstName;
                 cmd_user.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = runner.Lastname;
+                cmd_user.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
 
                 try
                 {
                     cmd_user.ExecuteNonQuery();
-                    conn.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -215,7 +215,8 @@ namespace Practice
 
             cmd_runner.Parameters.Add("@Gender", MySqlDbType.VarChar).Value = runner.Sex;
             cmd_runner.Parameters.Add("@DateOfBirth", MySqlDbType.VarChar).Value = runner.DateOfBirth;
-            cmd_runner.Parameters.Add("CountryCode", MySqlDbType.VarChar).Value = runner.CountryCode;
+            cmd_runner.Parameters.Add("@CountryCode", MySqlDbType.VarChar).Value = runner.CountryCode;
+            cmd_runner.Parameters.Add("@Email", MySqlDbType.VarChar).Value = runner.Email;
 
             try
             {

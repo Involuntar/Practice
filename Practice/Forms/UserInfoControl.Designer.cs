@@ -298,6 +298,7 @@
             this.BTN_AddNew.TabIndex = 43;
             this.BTN_AddNew.Text = "+ Добавление \r\nнового";
             this.BTN_AddNew.UseVisualStyleBackColor = true;
+            this.BTN_AddNew.Click += new System.EventHandler(this.BTN_AddNew_Click);
             // 
             // BTN_Refresh
             // 

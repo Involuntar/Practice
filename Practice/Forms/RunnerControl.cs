@@ -127,7 +127,9 @@ namespace Practice.Forms
         private void BTN_EditProfile_Click(object sender, EventArgs e)
         {
             EditProfile editProfile = new EditProfile();
-            editProfile.coordFuncs = true;
+            editProfile.formName = "Редактирование профиля бегуна";
+            editProfile.adminFuncs = false;
+            editProfile.userFuncs = false;
             editProfile.ShowDialog();
         }
     }

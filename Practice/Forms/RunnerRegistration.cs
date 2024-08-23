@@ -57,7 +57,7 @@ namespace Practice.Forms
 
         private void BTN_Register_Click(object sender, EventArgs e)
         {
-            TimeSpan AcceptableAge = new TimeSpan(10);
+            TimeSpan AcceptableAge = new TimeSpan(3650, 0, 0, 0);
             string DateOfBirth = DtPck_BirthDate.Value.ToString().Replace('.', '-').Split(' ')[0];
             string Year = DateOfBirth.Substring(6);
             string Day = DateOfBirth.Substring(6, 2);

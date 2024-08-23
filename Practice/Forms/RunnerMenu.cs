@@ -59,7 +59,9 @@ namespace Practice.Forms
         private void BTN_EditProfile_Click(object sender, EventArgs e)
         {
             EditProfile editProfile = new EditProfile();
-            editProfile.coordFuncs = false;
+            editProfile.formName = "Редактирование профиля";
+            editProfile.adminFuncs = false;
+            editProfile.userFuncs = true;
             editProfile.ShowDialog();
         }
 
