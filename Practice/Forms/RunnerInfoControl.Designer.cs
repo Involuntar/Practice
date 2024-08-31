@@ -414,6 +414,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerInfoControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RunnerInfoControl";
             this.Load += new System.EventHandler(this.RunnerInfoControl_Load);
             this.panel1.ResumeLayout(false);

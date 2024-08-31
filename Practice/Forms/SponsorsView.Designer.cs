@@ -41,11 +41,11 @@
             this.LBL_FundsAmount = new System.Windows.Forms.Label();
             this.LBL_CharityAmount = new System.Windows.Forms.Label();
             this.DGV_Sponsors = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Logo = new System.Windows.Forms.DataGridViewImageColumn();
             this.FundName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Summ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Sponsors)).BeginInit();
@@ -219,6 +219,29 @@
             this.DGV_Sponsors.Size = new System.Drawing.Size(884, 341);
             this.DGV_Sponsors.TabIndex = 31;
             // 
+            // Logo
+            // 
+            this.Logo.DataPropertyName = "CharityLogo";
+            this.Logo.HeaderText = "Логотип";
+            this.Logo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Logo.MinimumWidth = 6;
+            this.Logo.Name = "Logo";
+            this.Logo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // FundName
+            // 
+            this.FundName.DataPropertyName = "CharityName";
+            this.FundName.HeaderText = "Наименование организации";
+            this.FundName.MinimumWidth = 6;
+            this.FundName.Name = "FundName";
+            // 
+            // Summ
+            // 
+            this.Summ.DataPropertyName = "Amount";
+            this.Summ.HeaderText = "Сумма";
+            this.Summ.MinimumWidth = 6;
+            this.Summ.Name = "Summ";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -245,38 +268,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Logo
-            // 
-            this.Logo.DataPropertyName = "CharityLogo";
-            this.Logo.HeaderText = "Логотип";
-            this.Logo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Logo.MinimumWidth = 6;
-            this.Logo.Name = "Logo";
-            this.Logo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // FundName
-            // 
-            this.FundName.DataPropertyName = "CharityName";
-            this.FundName.HeaderText = "Наименование организации";
-            this.FundName.MinimumWidth = 6;
-            this.FundName.Name = "FundName";
-            // 
-            // Summ
-            // 
-            this.Summ.DataPropertyName = "Amount";
-            this.Summ.HeaderText = "Сумма";
-            this.Summ.MinimumWidth = 6;
-            this.Summ.Name = "Summ";
-            // 
             // SponsorsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(890, 641);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SponsorsView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SponsorsView";
             this.Load += new System.EventHandler(this.SponsorsView_Load);
             this.panel2.ResumeLayout(false);

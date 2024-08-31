@@ -184,12 +184,13 @@
             // 
             // CertificateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(979, 702);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CertificateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CertificateForm";
             this.Load += new System.EventHandler(this.CertificateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Logo)).EndInit();

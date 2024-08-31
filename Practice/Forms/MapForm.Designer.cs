@@ -36,13 +36,13 @@
             this.PANEL_Features = new System.Windows.Forms.Panel();
             this.LBL_Checkpoint = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LBL_Features = new System.Windows.Forms.Label();
             this.LBL_Med = new System.Windows.Forms.Label();
             this.PIC_Drinks = new System.Windows.Forms.PictureBox();
             this.LBL_Toilet = new System.Windows.Forms.Label();
             this.PIC_Med = new System.Windows.Forms.PictureBox();
             this.LBL_Energy = new System.Windows.Forms.Label();
             this.PIC_Energy = new System.Windows.Forms.PictureBox();
+            this.LBL_Features = new System.Windows.Forms.Label();
             this.LBL_Drinks = new System.Windows.Forms.Label();
             this.PIC_Toilet = new System.Windows.Forms.PictureBox();
             this.BTN_CloseFeatures = new System.Windows.Forms.Button();
@@ -168,19 +168,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(245, 236);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // LBL_Features
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.LBL_Features, 2);
-            this.LBL_Features.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Features.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Features.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LBL_Features.Location = new System.Drawing.Point(3, 0);
-            this.LBL_Features.Name = "LBL_Features";
-            this.LBL_Features.Size = new System.Drawing.Size(239, 47);
-            this.LBL_Features.TabIndex = 2;
-            this.LBL_Features.Text = "Особенности:";
-            this.LBL_Features.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // LBL_Med
             // 
             this.LBL_Med.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -249,6 +236,19 @@
             this.PIC_Energy.TabIndex = 7;
             this.PIC_Energy.TabStop = false;
             this.PIC_Energy.Visible = false;
+            // 
+            // LBL_Features
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.LBL_Features, 2);
+            this.LBL_Features.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Features.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Features.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LBL_Features.Location = new System.Drawing.Point(3, 0);
+            this.LBL_Features.Name = "LBL_Features";
+            this.LBL_Features.Size = new System.Drawing.Size(239, 47);
+            this.LBL_Features.TabIndex = 2;
+            this.LBL_Features.Text = "Особенности:";
+            this.LBL_Features.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LBL_Drinks
             // 
@@ -391,6 +391,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MapForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MapForm";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -242,8 +242,7 @@
             // 
             // MarathonInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.LBL_MarathonInfo);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -252,7 +251,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LBL_MoreInfo);
             this.Controls.Add(this.LBL_MarathonSkillsInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MarathonInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MarathonInfo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
