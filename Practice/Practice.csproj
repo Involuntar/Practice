@@ -167,6 +167,12 @@
     <Compile Include="Forms\MyResultsForm.Designer.cs">
       <DependentUpon>MyResultsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MySponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MySponsor.Designer.cs">
+      <DependentUpon>MySponsor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterOnMarathon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyResultsForm.resx">
       <DependentUpon>MyResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MySponsor.resx">
+      <DependentUpon>MySponsor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterOnMarathon.resx">
       <DependentUpon>RegisterOnMarathon.cs</DependentUpon>

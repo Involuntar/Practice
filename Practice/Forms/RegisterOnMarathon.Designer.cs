@@ -61,9 +61,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.MTBX_FeeSumm = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.MTBX_FeeSumm = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_FundInfo)).BeginInit();
@@ -483,6 +483,19 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(441, 200);
             this.tableLayoutPanel3.TabIndex = 36;
             // 
+            // MTBX_FeeSumm
+            // 
+            this.MTBX_FeeSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MTBX_FeeSumm.Culture = new System.Globalization.CultureInfo("en-US");
+            this.MTBX_FeeSumm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.MTBX_FeeSumm.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
+            this.MTBX_FeeSumm.Location = new System.Drawing.Point(188, 110);
+            this.MTBX_FeeSumm.Mask = "$00000000";
+            this.MTBX_FeeSumm.Name = "MTBX_FeeSumm";
+            this.MTBX_FeeSumm.ResetOnSpace = false;
+            this.MTBX_FeeSumm.Size = new System.Drawing.Size(199, 30);
+            this.MTBX_FeeSumm.TabIndex = 31;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
@@ -515,19 +528,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(894, 411);
             this.tableLayoutPanel5.TabIndex = 38;
-            // 
-            // MTBX_FeeSumm
-            // 
-            this.MTBX_FeeSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MTBX_FeeSumm.Culture = new System.Globalization.CultureInfo("en-US");
-            this.MTBX_FeeSumm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.MTBX_FeeSumm.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
-            this.MTBX_FeeSumm.Location = new System.Drawing.Point(188, 110);
-            this.MTBX_FeeSumm.Mask = "$00000000";
-            this.MTBX_FeeSumm.Name = "MTBX_FeeSumm";
-            this.MTBX_FeeSumm.ResetOnSpace = false;
-            this.MTBX_FeeSumm.Size = new System.Drawing.Size(199, 30);
-            this.MTBX_FeeSumm.TabIndex = 31;
             // 
             // RegisterOnMarathon
             // 

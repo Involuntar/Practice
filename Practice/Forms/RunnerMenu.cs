@@ -78,5 +78,12 @@ namespace Practice.Forms
             registerOnMarathon.Show();
             this.Close();
         }
+
+        private void BTN_Sponsor_Click(object sender, EventArgs e)
+        {
+            MySponsor sponsor = new MySponsor();
+            sponsor.Show();
+            this.Close();
+        }
     }
 }

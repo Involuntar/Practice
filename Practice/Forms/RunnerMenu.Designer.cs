@@ -154,6 +154,7 @@
             this.BTN_Sponsor.TabIndex = 6;
             this.BTN_Sponsor.Text = "Мой спонсор";
             this.BTN_Sponsor.UseVisualStyleBackColor = false;
+            this.BTN_Sponsor.Click += new System.EventHandler(this.BTN_Sponsor_Click);
             // 
             // tableLayoutPanel1
             // 
