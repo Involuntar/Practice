@@ -379,6 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.PIC_Checkpoint4);
             this.Controls.Add(this.PIC_Checkpoint1);
             this.Controls.Add(this.PIC_Checkpoint2);
@@ -392,7 +393,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MapForm";
+            this.Text = "Интерактивная карта";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PANEL_Features.ResumeLayout(false);

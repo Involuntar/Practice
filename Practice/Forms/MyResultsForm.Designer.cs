@@ -36,6 +36,11 @@
             this.LBL_Age = new System.Windows.Forms.Label();
             this.LBL_RunnerAge = new System.Windows.Forms.Label();
             this.DGV_Results = new System.Windows.Forms.DataGridView();
+            this.Marathon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commonPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_ShowAllResults = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Logout = new System.Windows.Forms.Button();
@@ -45,11 +50,6 @@
             this.LBL_TimeToStart = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Marathon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commonPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Results)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -158,6 +158,41 @@
             this.DGV_Results.ShowEditingIcon = false;
             this.DGV_Results.Size = new System.Drawing.Size(925, 179);
             this.DGV_Results.TabIndex = 6;
+            // 
+            // Marathon
+            // 
+            this.Marathon.DataPropertyName = "marathon";
+            this.Marathon.HeaderText = "Марафон";
+            this.Marathon.MinimumWidth = 6;
+            this.Marathon.Name = "Marathon";
+            // 
+            // Distance
+            // 
+            this.Distance.DataPropertyName = "distance";
+            this.Distance.HeaderText = "Дистанция";
+            this.Distance.MinimumWidth = 6;
+            this.Distance.Name = "Distance";
+            // 
+            // Time
+            // 
+            this.Time.DataPropertyName = "time";
+            this.Time.HeaderText = "Время";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            // 
+            // commonPlace
+            // 
+            this.commonPlace.DataPropertyName = "commonplace";
+            this.commonPlace.HeaderText = "Общее место";
+            this.commonPlace.MinimumWidth = 6;
+            this.commonPlace.Name = "commonPlace";
+            // 
+            // categoryPlace
+            // 
+            this.categoryPlace.DataPropertyName = "categoryplace";
+            this.categoryPlace.HeaderText = "Место в категории";
+            this.categoryPlace.MinimumWidth = 6;
+            this.categoryPlace.Name = "categoryPlace";
             // 
             // BTN_ShowAllResults
             // 
@@ -279,46 +314,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 214);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
-            // Marathon
-            // 
-            this.Marathon.DataPropertyName = "marathon";
-            this.Marathon.HeaderText = "Марафон";
-            this.Marathon.MinimumWidth = 6;
-            this.Marathon.Name = "Marathon";
-            // 
-            // Distance
-            // 
-            this.Distance.DataPropertyName = "distance";
-            this.Distance.HeaderText = "Дистанция";
-            this.Distance.MinimumWidth = 6;
-            this.Distance.Name = "Distance";
-            // 
-            // Time
-            // 
-            this.Time.DataPropertyName = "time";
-            this.Time.HeaderText = "Время";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            // 
-            // commonPlace
-            // 
-            this.commonPlace.DataPropertyName = "commonplace";
-            this.commonPlace.HeaderText = "Общее место";
-            this.commonPlace.MinimumWidth = 6;
-            this.commonPlace.Name = "commonPlace";
-            // 
-            // categoryPlace
-            // 
-            this.categoryPlace.DataPropertyName = "categoryplace";
-            this.categoryPlace.HeaderText = "Место в категории";
-            this.categoryPlace.MinimumWidth = 6;
-            this.categoryPlace.Name = "categoryPlace";
-            // 
             // MyResultsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(925, 579);
+            this.ControlBox = false;
             this.Controls.Add(this.DGV_Results);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
@@ -327,7 +328,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MyResultsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyResultsForm";
+            this.Text = "Мои результаты";
             this.Load += new System.EventHandler(this.MyResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Results)).EndInit();
             this.panel1.ResumeLayout(false);

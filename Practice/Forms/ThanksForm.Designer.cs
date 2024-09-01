@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 79);
+            this.panel1.Size = new System.Drawing.Size(928, 79);
             this.panel1.TabIndex = 1;
             // 
             // LBL_TimeToStart
@@ -75,7 +75,7 @@
             this.LBL_TimeToStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LBL_TimeToStart.Location = new System.Drawing.Point(0, 0);
             this.LBL_TimeToStart.Name = "LBL_TimeToStart";
-            this.LBL_TimeToStart.Size = new System.Drawing.Size(912, 46);
+            this.LBL_TimeToStart.Size = new System.Drawing.Size(928, 46);
             this.LBL_TimeToStart.TabIndex = 23;
             this.LBL_TimeToStart.Text = "Время до";
             this.LBL_TimeToStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,9 +86,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(62)))));
             this.panel2.Controls.Add(this.LBL_TimeToStart);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 595);
+            this.panel2.Location = new System.Drawing.Point(0, 640);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 46);
+            this.panel2.Size = new System.Drawing.Size(928, 46);
             this.panel2.TabIndex = 25;
             // 
             // timer1
@@ -102,7 +102,7 @@
             this.LBL_HeaderThanks.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold);
             this.LBL_HeaderThanks.Location = new System.Drawing.Point(0, 79);
             this.LBL_HeaderThanks.Name = "LBL_HeaderThanks";
-            this.LBL_HeaderThanks.Size = new System.Drawing.Size(912, 93);
+            this.LBL_HeaderThanks.Size = new System.Drawing.Size(928, 93);
             this.LBL_HeaderThanks.TabIndex = 26;
             this.LBL_HeaderThanks.Text = "Спасибо за Вашу спонсорскую поддержку!";
             this.LBL_HeaderThanks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,7 +114,7 @@
             this.LBL_ThanksPar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LBL_ThanksPar.Location = new System.Drawing.Point(0, 172);
             this.LBL_ThanksPar.Name = "LBL_ThanksPar";
-            this.LBL_ThanksPar.Size = new System.Drawing.Size(912, 69);
+            this.LBL_ThanksPar.Size = new System.Drawing.Size(928, 69);
             this.LBL_ThanksPar.TabIndex = 27;
             this.LBL_ThanksPar.Text = "Спасибо за поддержку бегуна в Marathon Skills 2024!\r\nВаше пожертвование пойдёт в " +
     "его благотворительную организацию";
@@ -126,7 +126,7 @@
             this.LBL_Runner.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold);
             this.LBL_Runner.Location = new System.Drawing.Point(0, 241);
             this.LBL_Runner.Name = "LBL_Runner";
-            this.LBL_Runner.Size = new System.Drawing.Size(912, 61);
+            this.LBL_Runner.Size = new System.Drawing.Size(928, 61);
             this.LBL_Runner.TabIndex = 28;
             this.LBL_Runner.Text = "ФИО Бегуна";
             this.LBL_Runner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,7 +138,7 @@
             this.LBL_RunnerFund.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LBL_RunnerFund.Location = new System.Drawing.Point(0, 302);
             this.LBL_RunnerFund.Name = "LBL_RunnerFund";
-            this.LBL_RunnerFund.Size = new System.Drawing.Size(912, 63);
+            this.LBL_RunnerFund.Size = new System.Drawing.Size(928, 63);
             this.LBL_RunnerFund.TabIndex = 29;
             this.LBL_RunnerFund.Text = "Фонд бегуна";
             this.LBL_RunnerFund.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,7 +150,7 @@
             this.LBL_CharityAmount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LBL_CharityAmount.Location = new System.Drawing.Point(0, 365);
             this.LBL_CharityAmount.Name = "LBL_CharityAmount";
-            this.LBL_CharityAmount.Size = new System.Drawing.Size(912, 142);
+            this.LBL_CharityAmount.Size = new System.Drawing.Size(928, 142);
             this.LBL_CharityAmount.TabIndex = 30;
             this.LBL_CharityAmount.Text = "$50";
             this.LBL_CharityAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,7 +159,7 @@
             // 
             this.BTN_Back.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTN_Back.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.BTN_Back.Location = new System.Drawing.Point(390, 510);
+            this.BTN_Back.Location = new System.Drawing.Point(398, 533);
             this.BTN_Back.Name = "BTN_Back";
             this.BTN_Back.Size = new System.Drawing.Size(131, 79);
             this.BTN_Back.TabIndex = 31;
@@ -172,6 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.ControlBox = false;
             this.Controls.Add(this.BTN_Back);
             this.Controls.Add(this.LBL_CharityAmount);
             this.Controls.Add(this.LBL_RunnerFund);
@@ -185,7 +186,6 @@
             this.MinimumSize = new System.Drawing.Size(930, 688);
             this.Name = "ThanksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThanksForm";
             this.Load += new System.EventHandler(this.ThanksForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

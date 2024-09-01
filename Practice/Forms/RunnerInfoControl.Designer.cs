@@ -408,6 +408,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(916, 636);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
@@ -415,7 +416,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerInfoControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RunnerInfoControl";
+            this.Text = "Бегуны";
             this.Load += new System.EventHandler(this.RunnerInfoControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

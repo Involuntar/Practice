@@ -80,8 +80,9 @@
             this.Controls.Add(this.RTBX_FundDesc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FundInfoForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FundInfoForm";
+            this.Text = "Информация о фонде";
             this.Load += new System.EventHandler(this.FundInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_FundLogo)).EndInit();
             this.ResumeLayout(false);

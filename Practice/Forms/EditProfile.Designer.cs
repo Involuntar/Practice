@@ -450,6 +450,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.ControlBox = false;
             this.Controls.Add(this.LBL_RunnerEdit);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -459,7 +460,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditForm";
+            this.Text = "Редактирование профиля";
             this.Load += new System.EventHandler(this.EditProfile_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

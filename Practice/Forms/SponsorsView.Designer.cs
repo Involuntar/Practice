@@ -272,13 +272,14 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(890, 641);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SponsorsView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SponsorsView";
+            this.Text = "Спонсоры";
             this.Load += new System.EventHandler(this.SponsorsView_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

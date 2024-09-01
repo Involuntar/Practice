@@ -533,6 +533,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(918, 669);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -542,7 +543,7 @@
             this.MinimumSize = new System.Drawing.Size(818, 716);
             this.Name = "RegisterOnMarathon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RgisterOnMarathon";
+            this.Text = "Регистрация на марфон";
             this.Load += new System.EventHandler(this.RegisterOnMarathon_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

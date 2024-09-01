@@ -224,6 +224,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(923, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LBL_RunnerMenu);
             this.Controls.Add(this.panel1);
@@ -231,7 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RunnerMenu";
+            this.Text = "Меню бегуна";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

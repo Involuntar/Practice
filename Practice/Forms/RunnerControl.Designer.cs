@@ -639,13 +639,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 615);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RunnerControl";
+            this.Text = "Управление бегуном";
             this.Activated += new System.EventHandler(this.RunnerControl_Activated);
             this.Load += new System.EventHandler(this.RunnerControl_Load);
             this.panel1.ResumeLayout(false);

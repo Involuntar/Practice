@@ -244,6 +244,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.ControlBox = false;
             this.Controls.Add(this.LBL_MarathonInfo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.LBL_MoreMoreInfo);
@@ -254,7 +255,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MarathonInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MarathonInfo";
+            this.Text = "О марафоне";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

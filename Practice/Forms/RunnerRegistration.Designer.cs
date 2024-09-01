@@ -369,6 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.ControlBox = false;
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.BTN_Register);
             this.Controls.Add(this.LBL_RegisterDesc);
@@ -379,7 +380,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RunnerRegistration";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.RunnerRegistration_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

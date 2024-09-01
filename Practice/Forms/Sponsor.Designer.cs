@@ -510,6 +510,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 641);
+            this.ControlBox = false;
             this.Controls.Add(this.PIC_FundInfo);
             this.Controls.Add(this.LBL_Charity);
             this.Controls.Add(this.panel2);
@@ -526,6 +527,7 @@
             this.MinimumSize = new System.Drawing.Size(930, 688);
             this.Name = "Sponsor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Спонсорство";
             this.Load += new System.EventHandler(this.Sponsor_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

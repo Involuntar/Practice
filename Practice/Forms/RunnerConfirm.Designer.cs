@@ -149,6 +149,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(870, 457);
+            this.ControlBox = false;
             this.Controls.Add(this.LBL_ThanksWordsPar);
             this.Controls.Add(this.LBL_ThanksWordsHeader);
             this.Controls.Add(this.panel2);
@@ -156,8 +157,8 @@
             this.Controls.Add(this.BTN_OK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RunnerConfirm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RunnerConfirm";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

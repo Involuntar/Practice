@@ -43,13 +43,13 @@
             this.PIC_FundLogo = new System.Windows.Forms.PictureBox();
             this.LBL_FundDesc = new System.Windows.Forms.Label();
             this.DGV_Sponsors = new System.Windows.Forms.DataGridView();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LBL_Amount = new System.Windows.Forms.Label();
             this.LBL_AmountFee = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_FundLogo)).BeginInit();
@@ -222,6 +222,24 @@
             this.DGV_Sponsors.Size = new System.Drawing.Size(292, 233);
             this.DGV_Sponsors.TabIndex = 36;
             // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "CharityName";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FirstName.HeaderText = "Спонсор";
+            this.FirstName.MinimumWidth = 6;
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "Charity";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LastName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.LastName.HeaderText = "Взнос";
+            this.LastName.MinimumWidth = 6;
+            this.LastName.Name = "LastName";
+            // 
             // LBL_Amount
             // 
             this.LBL_Amount.AutoSize = true;
@@ -296,35 +314,18 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "CharityName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FirstName.HeaderText = "Спонсор";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "Charity";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LastName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.LastName.HeaderText = "Взнос";
-            this.LastName.MinimumWidth = 6;
-            this.LastName.Name = "LastName";
-            // 
             // MySponsor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(908, 557);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MySponsor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MySponsor";
+            this.Text = "Мой спонсор";
             this.Load += new System.EventHandler(this.MySponsor_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
