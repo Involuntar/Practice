@@ -302,6 +302,7 @@
             this.TBX_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBX_Password.Location = new System.Drawing.Point(660, 94);
             this.TBX_Password.Name = "TBX_Password";
+            this.TBX_Password.PasswordChar = '*';
             this.TBX_Password.Size = new System.Drawing.Size(216, 30);
             this.TBX_Password.TabIndex = 27;
             // 
@@ -311,6 +312,7 @@
             this.TBX_RepPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBX_RepPassword.Location = new System.Drawing.Point(660, 144);
             this.TBX_RepPassword.Name = "TBX_RepPassword";
+            this.TBX_RepPassword.PasswordChar = '*';
             this.TBX_RepPassword.Size = new System.Drawing.Size(216, 30);
             this.TBX_RepPassword.TabIndex = 28;
             // 
