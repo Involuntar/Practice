@@ -53,9 +53,11 @@ namespace Practice.Forms
 
         private void Sponsor_Load(object sender, EventArgs e)
         {
-            Connection.SelectInComboBox("SELECT CONCAT(FirstName, ', ', LastName, ' - ', RunnerId, ' ', '(', CountryName, ')') as Runner, RunnerId FROM user " +
+            Connection.SelectInComboBox("SELECT CONCAT(FirstName, ', ', LastName, ' - ', BibNumber, ' ', '(', CountryName, ')') as Runner, runner.RunnerId FROM user " +
                 "JOIN runner ON user.Email = runner.Email " +
-                "JOIN country ON country.CountryCode = runner.CountryCode", CMBX_Runner, "Runner", "RunnerId");
+                "JOIN country ON country.CountryCode = runner.CountryCode " +
+                "JOIN registration ON registration.RunnerId = runner.RunnerId " +
+                "JOIN registrationevent ON registrationevent.RegistrationId = registration.RegistrationId", CMBX_Runner, "Runner", "RunnerId");
 
             MySqlConnection con = Connection.GetConnection();
             string sql = "SELECT CharityName FROM practice.charity WHERE CharityId IN " +
