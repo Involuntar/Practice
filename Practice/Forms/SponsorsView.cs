@@ -44,7 +44,7 @@ namespace Practice.Forms
                     (Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), 
                     $"marathon-skills-2016-charity-data/{reader.GetValue(0)}"));
                 DGV_Sponsors.Rows[rowNumber].Cells[1].Value = reader.GetValue(1).ToString();
-                DGV_Sponsors.Rows[rowNumber].Cells[2].Value = reader.GetValue(2).ToString();
+                DGV_Sponsors.Rows[rowNumber].Cells[2].Value = "$" + Convert.ToUInt32(reader.GetValue(2)).ToString("#,#", new CultureInfo("de-DE"));
                 charityAmount += Convert.ToUInt32(reader.GetValue(2));
                 fundsAmount++;
             }

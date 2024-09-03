@@ -140,7 +140,7 @@
             this.LBL_SponsorsView.Name = "LBL_SponsorsView";
             this.LBL_SponsorsView.Size = new System.Drawing.Size(884, 83);
             this.LBL_SponsorsView.TabIndex = 26;
-            this.LBL_SponsorsView.Text = "Просмотр сносоров";
+            this.LBL_SponsorsView.Text = "Просмотр спонсоров";
             this.LBL_SponsorsView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LBL_Funds

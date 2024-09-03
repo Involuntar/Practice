@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Logout = new System.Windows.Forms.Button();
             this.LBL_MarathonName = new System.Windows.Forms.Label();
@@ -225,8 +225,8 @@
             // FirstName
             // 
             this.FirstName.DataPropertyName = "CharityName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FirstName.DefaultCellStyle = dataGridViewCellStyle1;
             this.FirstName.HeaderText = "Спонсор";
             this.FirstName.MinimumWidth = 6;
             this.FirstName.Name = "FirstName";
@@ -234,8 +234,8 @@
             // LastName
             // 
             this.LastName.DataPropertyName = "Charity";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LastName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LastName.DefaultCellStyle = dataGridViewCellStyle2;
             this.LastName.HeaderText = "Взнос";
             this.LastName.MinimumWidth = 6;
             this.LastName.Name = "LastName";
